@@ -53,18 +53,18 @@ const CampaignCards = () => {
           {campaignReasons.map((reason, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-border bg-card"
+              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-brand-oxford text-white border-brand-oxford/20"
             >
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 rounded-full bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors duration-300">
+                <div className="mx-auto mb-4 p-3 rounded-full bg-primary/20 w-fit group-hover:bg-primary/30 transition-colors duration-300">
                   <reason.icon className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
                   {reason.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-muted-foreground leading-relaxed">
+                <CardDescription className="text-center text-brand-cosmic leading-relaxed">
                   {reason.description}
                 </CardDescription>
               </CardContent>

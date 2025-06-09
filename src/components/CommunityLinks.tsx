@@ -60,7 +60,7 @@ const CommunityLinks = () => {
                   {community.description}
                 </CardDescription>
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300"
+                  className="w-full bg-brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300"
                   onClick={() => window.open(community.link, '_blank')}
                 >
                   Join Now

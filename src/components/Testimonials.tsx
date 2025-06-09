@@ -6,28 +6,28 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Priya Sharma",
-      role: "Software Developer at TCS",
+      role: "School Student",
       content: "CCC helped me optimize my LinkedIn profile and prepare for interviews. Within 2 months, I landed my dream job! Their AI-powered career guidance was exactly what I needed.",
       rating: 5,
       image: "PS"
     },
     {
       name: "Rahul Kumar",
-      role: "Data Analyst at Wipro",
+      role: "LinkedIn User",
       content: "Coming from a small town college, I had no idea about industry standards. CCC's mentorship and job preparation tips transformed my career prospects completely.",
       rating: 5,
       image: "RK"
     },
     {
       name: "Anjali Patel",
-      role: "Marketing Executive at Infosys",
+      role: "College Student",
       content: "The career consultation sessions were incredibly valuable. They helped me understand my strengths and guided me towards the right career path. Highly recommended!",
       rating: 5,
       image: "AP"
     },
     {
       name: "Arjun Singh",
-      role: "Frontend Developer at HCL",
+      role: "LinkedIn User",
       content: "CCC's approach to using AI for career growth is revolutionary. They don't just give advice, they provide practical tools and strategies that actually work.",
       rating: 5,
       image: "AS"

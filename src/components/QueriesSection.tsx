@@ -50,7 +50,7 @@ const QueriesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {queryTypes.map((query, index) => (
             <Card 
               key={index} 
@@ -79,7 +79,7 @@ const QueriesSection = () => {
           ))}
         </div>
         
-        {/* Contact CTA */}
+        {/* Contact CTA - moved down with more spacing */}
         <div className="text-center">
           <Card className="max-w-3xl mx-auto bg-primary/10 backdrop-blur-sm border-primary/20">
             <CardContent className="p-8">
