@@ -1,12 +1,12 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Target, Zap, Instagram, Linkedin } from "lucide-react";
+import { ArrowRight, Users, Target, Zap, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const Hero = () => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 brand-oxford border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -16,16 +16,16 @@ const Hero = () => {
                 className="w-12 h-12"
               />
               <div>
-                <h1 className="text-xl font-bold text-brand-oxford">Career Catalyst Community</h1>
-                <p className="text-sm text-brand-jet">Learning to Earning Campaign</p>
+                <h1 className="text-xl font-bold text-white">Career Catalyst Community</h1>
+                <p className="text-sm text-brand-cosmic">Learning to Earning Campaign</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Instagram className="h-5 w-5 text-brand-oxford hover:text-primary" />
+                <Instagram className="h-5 w-5 text-white hover:text-primary" />
               </Button>
               <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Linkedin className="h-5 w-5 text-brand-oxford hover:text-primary" />
+                <Linkedin className="h-5 w-5 text-white hover:text-primary" />
               </Button>
             </div>
           </div>
@@ -33,7 +33,7 @@ const Hero = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
+      <section className="relative h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-xl"></div>
