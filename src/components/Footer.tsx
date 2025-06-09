@@ -1,7 +1,7 @@
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Heart, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -22,18 +22,18 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-brand-silver leading-relaxed mb-6 max-w-md">
-              Empowering individuals to transform their skills into sustainable income 
-              through comprehensive learning programs and community support.
+              A non-profit initiative dedicated to bridging industry gaps and empowering 
+              individuals to transform their skills into sustainable income opportunities.
             </p>
             <div className="flex space-x-4">
               <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
+                <Instagram className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
+                <Linkedin className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
                 <Mail className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
-                <Phone className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
-                <MapPin className="h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -43,10 +43,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-3">
               <li><a href="#about" className="text-brand-silver hover:text-primary transition-colors duration-300">About Campaign</a></li>
-              <li><a href="#courses" className="text-brand-silver hover:text-primary transition-colors duration-300">Learning Paths</a></li>
-              <li><a href="#success" className="text-brand-silver hover:text-primary transition-colors duration-300">Success Stories</a></li>
-              <li><a href="#community" className="text-brand-silver hover:text-primary transition-colors duration-300">Community</a></li>
-              <li><a href="#resources" className="text-brand-silver hover:text-primary transition-colors duration-300">Resources</a></li>
+              <li><a href="#communities" className="text-brand-silver hover:text-primary transition-colors duration-300">Join Communities</a></li>
+              <li><a href="#collaborate" className="text-brand-silver hover:text-primary transition-colors duration-300">Collaborate</a></li>
+              <li><a href="#impact" className="text-brand-silver hover:text-primary transition-colors duration-300">Our Impact</a></li>
+              <li><a href="#contact" className="text-brand-silver hover:text-primary transition-colors duration-300">Contact</a></li>
             </ul>
           </div>
           
@@ -55,8 +55,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-primary">Support</h4>
             <ul className="space-y-3">
               <li><a href="#help" className="text-brand-silver hover:text-primary transition-colors duration-300">Help Center</a></li>
-              <li><a href="#contact" className="text-brand-silver hover:text-primary transition-colors duration-300">Contact Us</a></li>
-              <li><a href="#faq" className="text-brand-silver hover:text-primary transition-colors duration-300">FAQ</a></li>
+              <li><a href="#partnership" className="text-brand-silver hover:text-primary transition-colors duration-300">Partnership</a></li>
+              <li><a href="#volunteer" className="text-brand-silver hover:text-primary transition-colors duration-300">Volunteer</a></li>
               <li><a href="#privacy" className="text-brand-silver hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
               <li><a href="#terms" className="text-brand-silver hover:text-primary transition-colors duration-300">Terms of Service</a></li>
             </ul>
@@ -72,7 +72,7 @@ const Footer = () => {
             <span>by Career Catalyst Community</span>
           </div>
           <p className="text-brand-silver">
-            © 2024 CCC Learning to Earning Campaign. All rights reserved.
+            © 2024 CCC Learning to Earning Campaign. A Non-Profit Initiative.
           </p>
         </div>
       </div>

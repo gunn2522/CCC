@@ -9,30 +9,30 @@ const CollaborationSection = () => {
     {
       icon: Briefcase,
       title: "Industry Partners",
-      description: "Companies looking to upskill their workforce or find talented individuals from our community.",
-      benefits: ["Access to talent pool", "Custom training programs", "Brand visibility"],
+      description: "Companies seeking to bridge talent gaps and contribute to skill development in the community.",
+      benefits: ["Website featuring", "Brand launch partnership", "Community recognition"],
       cta: "Partner With Us"
     },
     {
       icon: Users,
       title: "Content Creators",
-      description: "Educators, influencers, and experts who want to share knowledge and monetize their expertise.",
-      benefits: ["Revenue sharing", "Platform access", "Community reach"],
-      cta: "Become Creator"
+      description: "Educators and influencers passionate about sharing knowledge and creating social impact.",
+      benefits: ["Platform visibility", "Launch event invitation", "Community collaboration"],
+      cta: "Create With Us"
     },
     {
       icon: Rocket,
       title: "Startup Founders",
-      description: "Entrepreneurs seeking skilled team members or wanting to share their journey with our community.",
-      benefits: ["Talent recruitment", "Mentorship opportunities", "Network expansion"],
-      cta: "Join as Founder"
+      description: "Entrepreneurs wanting to give back to the community while building meaningful connections.",
+      benefits: ["Networking opportunities", "Website showcase", "Partner recognition"],
+      cta: "Collaborate Now"
     },
     {
       icon: Star,
       title: "Mentors & Coaches",
-      description: "Experienced professionals who want to guide and support the next generation of earners.",
-      benefits: ["Flexible scheduling", "Impact measurement", "Compensation options"],
-      cta: "Mentor Others"
+      description: "Experienced professionals committed to nurturing the next generation of skilled professionals.",
+      benefits: ["Impact measurement", "Launch event access", "Community leadership"],
+      cta: "Mentor With Us"
     }
   ];
 
@@ -50,8 +50,8 @@ const CollaborationSection = () => {
             <span className="text-primary">Collaborate</span> With Us
           </h2>
           <p className="text-xl text-brand-cosmic max-w-3xl mx-auto leading-relaxed">
-            Join our ecosystem as a collaborator and help shape the future of learning and earning. 
-            We welcome partnerships that create mutual value and drive positive impact.
+            As a non-profit initiative, we offer meaningful partnerships that create social impact. 
+            Join us in bridging industry gaps while gaining valuable exposure and networking opportunities.
           </p>
         </div>
         
@@ -77,7 +77,7 @@ const CollaborationSection = () => {
                 </CardDescription>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-brand-oxford mb-3">Benefits:</h4>
+                  <h4 className="font-semibold text-brand-oxford mb-3">Partner Benefits:</h4>
                   <div className="flex flex-wrap gap-2">
                     {collab.benefits.map((benefit, idx) => (
                       <Badge 
@@ -107,16 +107,16 @@ const CollaborationSection = () => {
           <Card className="max-w-2xl mx-auto bg-primary/10 backdrop-blur-sm border-primary/20">
             <CardContent className="p-8">
               <Handshake className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Collaborate?</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Ready to Make an Impact?</h3>
               <p className="text-brand-cosmic mb-6">
-                Have a unique collaboration idea? We'd love to hear from you. 
-                Let's create something amazing together.
+                Join our non-profit mission to bridge industry gaps. Get featured on our website 
+                and be part of our exclusive brand launch event as a valued partner.
               </p>
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-4 transition-all duration-300 transform hover:scale-105"
               >
-                Get In Touch
+                Become a Partner
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </CardContent>

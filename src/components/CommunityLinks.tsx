@@ -1,44 +1,30 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, MessageCircle, Users, Calendar, BookOpen, Video } from "lucide-react";
+import { ExternalLink, MessageCircle, Instagram, Linkedin } from "lucide-react";
 
 const CommunityLinks = () => {
   const communities = [
     {
       icon: MessageCircle,
-      title: "Discord Community",
-      description: "Join our vibrant Discord server for real-time discussions, Q&A sessions, and networking with fellow learners.",
-      link: "#discord",
-      color: "bg-purple-500/10 text-purple-600"
-    },
-    {
-      icon: Users,
-      title: "LinkedIn Group",
-      description: "Connect with professionals in our LinkedIn community for career insights and industry networking.",
-      link: "#linkedin",
-      color: "bg-blue-500/10 text-blue-600"
-    },
-    {
-      icon: Calendar,
-      title: "Weekly Webinars",
-      description: "Attend our weekly live sessions featuring industry experts sharing insights on earning strategies.",
-      link: "#webinars",
+      title: "WhatsApp Community",
+      description: "Join our WhatsApp group for instant updates, discussions, and direct support from our team.",
+      link: "#whatsapp",
       color: "bg-green-500/10 text-green-600"
     },
     {
-      icon: BookOpen,
-      title: "Resource Library",
-      description: "Access our comprehensive library of guides, templates, and tools for your learning journey.",
-      link: "#resources",
-      color: "bg-orange-500/10 text-orange-600"
+      icon: Instagram,
+      title: "Instagram",
+      description: "Follow us for daily inspiration, success stories, and behind-the-scenes content from our campaigns.",
+      link: "#instagram",
+      color: "bg-pink-500/10 text-pink-600"
     },
     {
-      icon: Video,
-      title: "YouTube Channel",
-      description: "Subscribe to our channel for tutorials, success stories, and tips on converting skills to income.",
-      link: "#youtube",
-      color: "bg-red-500/10 text-red-600"
+      icon: Linkedin,
+      title: "LinkedIn",
+      description: "Connect with professionals in our LinkedIn community for career insights and industry networking.",
+      link: "#linkedin",
+      color: "bg-blue-500/10 text-blue-600"
     }
   ];
 
@@ -50,12 +36,12 @@ const CommunityLinks = () => {
             Join Our <span className="text-primary">Communities</span>
           </h2>
           <p className="text-xl text-brand-jet max-w-3xl mx-auto leading-relaxed">
-            Connect, learn, and grow with like-minded individuals across multiple platforms. 
-            Choose the community that best fits your learning style and preferences.
+            Connect with like-minded individuals committed to bridging industry gaps. 
+            Choose the platform that works best for you.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {communities.map((community, index) => (
             <Card 
               key={index} 
