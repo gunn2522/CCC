@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, Zap, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -20,6 +24,39 @@ const Hero = () => {
                 <p className="text-sm text-brand-cosmic">Learning to Earning Campaign</p>
               </div>
             </div>
+            
+            {/* Navigation Menu */}
+            <div className="hidden md:flex items-center space-x-6">
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10"
+                onClick={() => scrollToSection('home')}
+              >
+                Home
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10"
+                onClick={() => scrollToSection('collaborators')}
+              >
+                Collaborators
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10"
+                onClick={() => scrollToSection('testimonials')}
+              >
+                Testimonials
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10"
+                onClick={() => scrollToSection('queries')}
+              >
+                Ask Queries
+              </Button>
+            </div>
+            
             <div className="flex items-center space-x-4">
               <Button variant="ghost" size="icon" className="hover:bg-primary/10">
                 <Instagram className="h-5 w-5 text-white hover:text-primary" />
@@ -33,7 +70,7 @@ const Hero = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
+      <section id="home" className="relative h-[60vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-xl"></div>
@@ -52,18 +89,18 @@ const Hero = () => {
               A Non-Profit Initiative by Career Catalyst Community
             </p>
             
-            <p className="text-lg md:text-xl text-secondary mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Bridging industry gaps through skills transformation. Join our mission to make 
-              earning opportunities accessible to everyone, everywhere.
+            <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+              Empowering freshers from underserved communities with career guidance, LinkedIn optimization, 
+              job preparation, and AI-powered growth strategies. From consultations to placements - we're here to help you succeed.
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in mb-12">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg transition-all duration-300 transform hover:scale-105"
               >
-                Join the Movement
+                Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
@@ -71,13 +108,14 @@ const Hero = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg transition-all duration-300"
+                onClick={() => scrollToSection('queries')}
               >
-                Learn More
+                Ask a Question
               </Button>
             </div>
             
             {/* Impact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
               <div className="text-center">
                 <div className="flex items-center justify-center mb-3">
                   <Users className="h-8 w-8 text-primary mr-2" />
@@ -91,7 +129,7 @@ const Hero = () => {
                   <Target className="h-8 w-8 text-primary mr-2" />
                   <span className="text-3xl font-bold text-primary">∞</span>
                 </div>
-                <p className="text-secondary">Opportunities Created</p>
+                <p className="text-secondary">Career Opportunities</p>
               </div>
               
               <div className="text-center">

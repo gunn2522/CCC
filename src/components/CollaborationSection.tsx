@@ -2,42 +2,42 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Handshake, Briefcase, Users, Rocket, Star, ArrowRight } from "lucide-react";
+import { Handshake, Briefcase, Users, Rocket, Star, ArrowRight, Check } from "lucide-react";
 
 const CollaborationSection = () => {
   const collaborationTypes = [
     {
       icon: Briefcase,
       title: "Industry Partners",
-      description: "Companies seeking to bridge talent gaps and contribute to skill development in the community.",
-      benefits: ["Website featuring", "Brand launch partnership", "Community recognition"],
+      description: "Companies seeking to bridge talent gaps and contribute to skill development.",
+      benefits: ["Website featuring", "Brand launch partnership", "Community recognition", "CSR opportunity"],
       cta: "Partner With Us"
     },
     {
       icon: Users,
       title: "Content Creators",
       description: "Educators and influencers passionate about sharing knowledge and creating social impact.",
-      benefits: ["Platform visibility", "Launch event invitation", "Community collaboration"],
+      benefits: ["Platform visibility", "Launch event invitation", "Community collaboration", "Content showcase"],
       cta: "Create With Us"
     },
     {
       icon: Rocket,
       title: "Startup Founders",
       description: "Entrepreneurs wanting to give back to the community while building meaningful connections.",
-      benefits: ["Networking opportunities", "Website showcase", "Partner recognition"],
+      benefits: ["Networking opportunities", "Website showcase", "Partner recognition", "Mentor network"],
       cta: "Collaborate Now"
     },
     {
       icon: Star,
       title: "Mentors & Coaches",
       description: "Experienced professionals committed to nurturing the next generation of skilled professionals.",
-      benefits: ["Impact measurement", "Launch event access", "Community leadership"],
+      benefits: ["Impact measurement", "Launch event access", "Community leadership", "Recognition badge"],
       cta: "Mentor With Us"
     }
   ];
 
   return (
-    <section className="py-20 brand-oxford text-white relative overflow-hidden">
+    <section id="collaborators" className="py-20 brand-oxford text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 right-10 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
@@ -55,38 +55,33 @@ const CollaborationSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
           {collaborationTypes.map((collab, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/95 backdrop-blur-sm border-none h-full"
+              className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/95 backdrop-blur-sm border-none h-full flex flex-col"
             >
-              <CardHeader className="pb-4">
-                <div className="flex flex-col items-center mb-4">
-                  <div className="p-3 rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 transition-colors duration-300">
-                    <collab.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg font-bold text-brand-oxford text-center">
-                    {collab.title}
-                  </CardTitle>
+              <CardHeader className="pb-4 text-center">
+                <div className="p-3 rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 transition-colors duration-300 mx-auto w-fit">
+                  <collab.icon className="h-8 w-8 text-primary" />
                 </div>
+                <CardTitle className="text-lg font-bold text-brand-oxford">
+                  {collab.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-col h-full">
-                <CardDescription className="text-brand-jet mb-4 leading-relaxed text-sm flex-grow">
+              <CardContent className="flex flex-col flex-grow">
+                <CardDescription className="text-brand-jet mb-4 leading-relaxed text-sm">
                   {collab.description}
                 </CardDescription>
                 
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <h4 className="font-semibold text-brand-oxford mb-3 text-sm">Partner Benefits:</h4>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="space-y-2">
                     {collab.benefits.map((benefit, idx) => (
-                      <Badge 
-                        key={idx} 
-                        variant="secondary" 
-                        className="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors duration-300 text-xs"
-                      >
-                        {benefit}
-                      </Badge>
+                      <div key={idx} className="flex items-center text-xs text-brand-jet">
+                        <Check className="h-3 w-3 text-primary mr-2 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
