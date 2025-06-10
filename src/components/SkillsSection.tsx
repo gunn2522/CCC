@@ -84,48 +84,48 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-oxford mb-6">
-            Skills You Can <span className="text-primary">Learn & Earn</span> From
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-oxford mb-6">
+            Learn. Grow. <span className="text-primary">Earn.</span>
           </h2>
-          <p className="text-xl text-brand-jet max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg text-brand-jet max-w-2xl mx-auto leading-relaxed mb-12">
             Join specialized communities for each skill area and start your journey from learning to earning. 
             Connect with experts, get resources, and grow your career.
           </p>
-          <div className="bg-primary/10 rounded-lg p-6 max-w-4xl mx-auto border-l-4 border-primary">
-            <p className="text-lg font-semibold text-brand-oxford mb-2">
+          <div className="bg-primary/5 rounded-xl p-8 max-w-5xl mx-auto border-l-4 border-primary shadow-lg">
+            <p className="text-xl font-bold text-brand-oxford mb-3">
               This is a non-profit campaign dedicated to providing students with essential skills at no cost.
             </p>
-            <p className="text-brand-jet">
-              A social impact initiative by CCC Company – redefining education for a brighter future.
+            <p className="text-brand-jet text-lg">
+              A social impact initiative by <span className="font-semibold text-brand-oxford">CCC Company</span> – redefining education for a brighter future.
             </p>
           </div>
         </div>
 
-        {/* Desktop Layout - 8 cards in a row with equal distribution */}
-        <div className="hidden lg:grid lg:grid-cols-8 gap-4 mb-12">
+        {/* Desktop Layout - 8 cards in a row with full breadth */}
+        <div className="hidden lg:grid lg:grid-cols-8 gap-6 mb-12">
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full flex flex-col"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/20"
             >
-              <CardHeader className="text-center pb-3 px-3 flex-grow">
-                <div className={`mx-auto mb-3 p-2 rounded-full w-fit ${skill.color} group-hover:scale-110 transition-transform duration-300`}>
-                  <skill.icon className="h-6 w-6" />
+              <CardHeader className="text-center pb-4 px-4 flex-grow">
+                <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500`}>
+                  <skill.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-sm font-bold text-brand-oxford leading-tight mb-2">
+                <CardTitle className="text-base font-bold text-brand-oxford leading-tight mb-3 group-hover:text-primary transition-colors duration-300">
                   {skill.title}
                 </CardTitle>
-                <CardDescription className="text-brand-jet leading-relaxed text-xs flex-grow">
+                <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center px-3 pb-4 mt-auto">
+              <CardContent className="text-center px-4 pb-6 mt-auto">
                 <Button 
                   size="sm"
-                  className="w-full bg-brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300 text-xs py-2"
+                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-sm py-3 font-semibold hover:shadow-lg transform hover:scale-105"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -138,24 +138,24 @@ const SkillsSection = () => {
         {/* Mobile/Tablet Layout - Carousel */}
         <div className="lg:hidden">
           <Carousel className="w-full">
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-3 md:-ml-4">
               {skills.map((skill, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                  <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full flex flex-col">
-                    <CardHeader className="text-center pb-4 flex-grow">
-                      <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-110 transition-transform duration-300`}>
-                        <skill.icon className="h-8 w-8" />
+                <CarouselItem key={index} className="pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3">
+                  <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/20">
+                    <CardHeader className="text-center pb-6 px-6 flex-grow">
+                      <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500`}>
+                        <skill.icon className="h-10 w-10" />
                       </div>
-                      <CardTitle className="text-lg font-bold text-brand-oxford mb-2">
+                      <CardTitle className="text-xl font-bold text-brand-oxford mb-4 group-hover:text-primary transition-colors duration-300">
                         {skill.title}
                       </CardTitle>
-                      <CardDescription className="text-brand-jet leading-relaxed flex-grow">
+                      <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
                         {skill.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="text-center mt-auto">
+                    <CardContent className="text-center px-6 pb-6 mt-auto">
                       <Button 
-                        className="w-full bg-brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300"
+                        className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-4 font-semibold hover:shadow-lg transform hover:scale-105"
                         onClick={() => handleJoinNow(skill.link)}
                       >
                         Join Now
