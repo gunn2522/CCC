@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Video, Rocket, Users, ExternalLink, CheckCircle, Star, TrendingUp, Network, Award } from "lucide-react";
+import { Building2, Video, Rocket, Users, ExternalLink, CheckCircle, Star, TrendingUp, Network, Award, Heart, Target } from "lucide-react";
 
 const Collaborators = () => {
   const collaboratorTypes = [

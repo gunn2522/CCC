@@ -90,31 +90,39 @@ const SkillsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-oxford mb-6">
             Skills You Can <span className="text-primary">Learn & Earn</span> From
           </h2>
-          <p className="text-xl text-brand-jet max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-brand-jet max-w-3xl mx-auto leading-relaxed mb-8">
             Join specialized communities for each skill area and start your journey from learning to earning. 
             Connect with experts, get resources, and grow your career.
           </p>
+          <div className="bg-primary/10 rounded-lg p-6 max-w-4xl mx-auto border-l-4 border-primary">
+            <p className="text-lg font-semibold text-brand-oxford mb-2">
+              This is a non-profit campaign dedicated to providing students with essential skills at no cost.
+            </p>
+            <p className="text-brand-jet">
+              A social impact initiative by CCC Company – redefining education for a brighter future.
+            </p>
+          </div>
         </div>
 
-        {/* Desktop Layout - 8 cards in a row */}
-        <div className="hidden lg:grid lg:grid-cols-4 xl:grid-cols-8 gap-4 mb-12">
+        {/* Desktop Layout - 8 cards in a row with equal distribution */}
+        <div className="hidden lg:grid lg:grid-cols-8 gap-4 mb-12">
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full"
+              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full flex flex-col"
             >
-              <CardHeader className="text-center pb-3 px-3">
+              <CardHeader className="text-center pb-3 px-3 flex-grow">
                 <div className={`mx-auto mb-3 p-2 rounded-full w-fit ${skill.color} group-hover:scale-110 transition-transform duration-300`}>
                   <skill.icon className="h-6 w-6" />
                 </div>
-                <CardTitle className="text-sm font-bold text-brand-oxford leading-tight">
+                <CardTitle className="text-sm font-bold text-brand-oxford leading-tight mb-2">
                   {skill.title}
                 </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-3 pb-4">
-                <CardDescription className="text-brand-jet mb-4 leading-relaxed text-xs">
+                <CardDescription className="text-brand-jet leading-relaxed text-xs flex-grow">
                   {skill.description}
                 </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center px-3 pb-4 mt-auto">
                 <Button 
                   size="sm"
                   className="w-full bg-brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300 text-xs py-2"
@@ -133,19 +141,19 @@ const SkillsSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {skills.map((skill, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                  <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full">
-                    <CardHeader className="text-center pb-4">
+                  <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-secondary h-full flex flex-col">
+                    <CardHeader className="text-center pb-4 flex-grow">
                       <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-110 transition-transform duration-300`}>
                         <skill.icon className="h-8 w-8" />
                       </div>
-                      <CardTitle className="text-lg font-bold text-brand-oxford">
+                      <CardTitle className="text-lg font-bold text-brand-oxford mb-2">
                         {skill.title}
                       </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center">
-                      <CardDescription className="text-brand-jet mb-6 leading-relaxed">
+                      <CardDescription className="text-brand-jet leading-relaxed flex-grow">
                         {skill.description}
                       </CardDescription>
+                    </CardHeader>
+                    <CardContent className="text-center mt-auto">
                       <Button 
                         className="w-full bg-brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300"
                         onClick={() => handleJoinNow(skill.link)}
