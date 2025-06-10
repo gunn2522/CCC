@@ -7,6 +7,10 @@ const Hero = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigateToPage = (path: string) => {
+    window.location.href = path;
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -37,21 +41,21 @@ const Hero = () => {
               <Button 
                 variant="ghost" 
                 className="text-white hover:text-primary hover:bg-primary/10"
-                onClick={() => scrollToSection('collaborators')}
+                onClick={() => navigateToPage('/collaborators')}
               >
                 Collaborators
               </Button>
               <Button 
                 variant="ghost" 
                 className="text-white hover:text-primary hover:bg-primary/10"
-                onClick={() => scrollToSection('testimonials')}
+                onClick={() => navigateToPage('/testimonials')}
               >
                 Testimonials
               </Button>
               <Button 
                 variant="ghost" 
                 className="text-white hover:text-primary hover:bg-primary/10"
-                onClick={() => scrollToSection('queries')}
+                onClick={() => navigateToPage('/queries')}
               >
                 Ask Queries
               </Button>
