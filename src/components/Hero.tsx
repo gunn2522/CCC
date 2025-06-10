@@ -11,6 +11,10 @@ const Hero = () => {
     window.location.href = path;
   };
 
+  const openLink = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -62,10 +66,20 @@ const Hero = () => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary/10"
+                onClick={() => openLink('https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ygh8fhi')}
+              >
                 <Instagram className="h-5 w-5 text-white hover:text-primary" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary/10"
+                onClick={() => openLink('https://www.linkedin.com/company/ccclearntoearn/')}
+              >
                 <Linkedin className="h-5 w-5 text-white hover:text-primary" />
               </Button>
             </div>

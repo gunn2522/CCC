@@ -9,21 +9,21 @@ const CommunityLinks = () => {
       icon: MessageCircle,
       title: "WhatsApp Community",
       description: "Join our WhatsApp group for instant updates, discussions, and direct support from our team.",
-      link: "#whatsapp",
+      link: "https://chat.whatsapp.com/HA2OtWFBunc324bQFSUNuG",
       color: "bg-green-500/10 text-green-600"
     },
     {
       icon: Instagram,
       title: "Instagram",
       description: "Follow us for daily inspiration, success stories, and behind-the-scenes content from our campaigns.",
-      link: "#instagram",
+      link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ygh8fhi",
       color: "bg-pink-500/10 text-pink-600"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       description: "Connect with professionals in our LinkedIn community for career insights and industry networking.",
-      link: "#linkedin",
+      link: "https://www.linkedin.com/company/ccclearntoearn/",
       color: "bg-blue-500/10 text-blue-600"
     }
   ];
