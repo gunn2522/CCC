@@ -52,7 +52,7 @@ const CommunityLinks = () => {
                 <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${community.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <community.icon className="h-8 w-8" />
                 </div>
-                <CardTitle className="text-lg font-bold text-white group-hover:text-primary transition-colors duration-300 min-h-[56px] flex items-center justify-center">
+                <CardTitle className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 min-h-[56px] flex items-center justify-center">
                   {community.title}
                 </CardTitle>
                 <CardDescription className="text-brand-cosmic leading-relaxed text-base flex-grow group-hover:text-white transition-colors duration-300">
@@ -83,7 +83,7 @@ const CommunityLinks = () => {
                 <div className={`mx-auto mb-5 p-3 rounded-full w-fit ${community.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <community.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-base font-bold text-white group-hover:text-primary transition-colors duration-300 mb-3">
+                <CardTitle className="text-lg font-bold text-white group-hover:text-primary transition-colors duration-300 mb-3">
                   {community.title}
                 </CardTitle>
                 <CardDescription className="text-brand-cosmic leading-relaxed text-sm flex-grow group-hover:text-white transition-colors duration-300">

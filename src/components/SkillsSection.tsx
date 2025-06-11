@@ -88,7 +88,7 @@ const SkillsSection = () => {
       <div className="w-full max-w-none px-8 lg:px-16">
         {/* Hero-style heading section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-oxford mb-6 leading-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-brand-oxford mb-6 leading-tight">
             Learn. Grow. <span className="text-primary">Earn.</span>
           </h1>
           
@@ -121,7 +121,7 @@ const SkillsSection = () => {
                 <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <skill.icon className="h-8 w-8" />
                 </div>
-                <CardTitle className="text-lg font-bold text-brand-oxford leading-tight mb-4 group-hover:text-primary transition-colors duration-300 min-h-[48px] flex items-center justify-center">
+                <CardTitle className="text-xl font-bold text-brand-oxford leading-tight mb-4 group-hover:text-primary transition-colors duration-300 min-h-[48px] flex items-center justify-center">
                   {skill.title}
                 </CardTitle>
                 <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
@@ -151,7 +151,7 @@ const SkillsSection = () => {
                 <div className={`mx-auto mb-5 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <skill.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-base font-bold text-brand-oxford leading-tight mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                <CardTitle className="text-lg font-bold text-brand-oxford leading-tight mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                   {skill.title}
                 </CardTitle>
                 <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
@@ -181,7 +181,7 @@ const SkillsSection = () => {
                       <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                         <skill.icon className="h-7 w-7" />
                       </div>
-                      <CardTitle className="text-base font-bold text-brand-oxford mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                      <CardTitle className="text-lg font-bold text-brand-oxford mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                         {skill.title}
                       </CardTitle>
                       <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">

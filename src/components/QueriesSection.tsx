@@ -24,9 +24,9 @@ const QueriesSection = () => {
     {
       icon: Phone,
       title: "Schedule a Call",
-      description: "Book a one-on-one consultation call with our career guidance experts.",
+      description: "Book a one-on-one consultation call with our career guidance experts. Contact: 9988066050",
       action: "Book Call",
-      link: "#",
+      link: "tel:+919988066050",
       color: "bg-purple-500/10 text-purple-600"
     },
     {
@@ -65,7 +65,7 @@ const QueriesSection = () => {
                 <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${method.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <method.icon className="h-8 w-8" />
                 </div>
-                <CardTitle className="text-lg font-bold text-brand-oxford group-hover:text-primary transition-colors duration-300 min-h-[48px] flex items-center justify-center">
+                <CardTitle className="text-xl font-bold text-brand-oxford group-hover:text-primary transition-colors duration-300 min-h-[48px] flex items-center justify-center">
                   {method.title}
                 </CardTitle>
                 <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
@@ -84,8 +84,8 @@ const QueriesSection = () => {
           ))}
         </div>
 
-        {/* Tablet Layout - 3 cards per row */}
-        <div className="hidden md:grid lg:hidden md:grid-cols-3 gap-5 mb-12">
+        {/* Tablet Layout - 2 cards per row */}
+        <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-5 mb-12">
           {contactMethods.map((method, index) => (
             <Card 
               key={index}
@@ -95,7 +95,7 @@ const QueriesSection = () => {
                 <div className={`mx-auto mb-5 p-3 rounded-full w-fit ${method.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <method.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-base font-bold text-brand-oxford group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                <CardTitle className="text-lg font-bold text-brand-oxford group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                   {method.title}
                 </CardTitle>
                 <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
@@ -125,7 +125,7 @@ const QueriesSection = () => {
                 <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${method.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <method.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-base font-bold text-brand-oxford mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                <CardTitle className="text-lg font-bold text-brand-oxford mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                   {method.title}
                 </CardTitle>
                 <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
