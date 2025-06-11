@@ -130,7 +130,7 @@ const SkillsSection = () => {
               </CardHeader>
               <CardContent className="text-center px-8 pb-8 mt-auto">
                 <Button 
-                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-lg py-6 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                  className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-lg py-6 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -160,7 +160,7 @@ const SkillsSection = () => {
               </CardHeader>
               <CardContent className="text-center px-6 pb-6 mt-auto">
                 <Button 
-                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                  className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -190,7 +190,7 @@ const SkillsSection = () => {
                     </CardHeader>
                     <CardContent className="text-center px-6 pb-6 mt-auto">
                       <Button 
-                        className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                        className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                         onClick={() => handleJoinNow(skill.link)}
                       >
                         Join Now
