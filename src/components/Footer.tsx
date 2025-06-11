@@ -1,12 +1,12 @@
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Heart, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Heart, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-brand-jet text-white py-16">
-      <div className="container mx-auto px-6">
+      <div className="w-full max-w-none px-8 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
           <div className="md:col-span-2">
@@ -25,14 +25,45 @@ const Footer = () => {
               A non-profit initiative dedicated to bridging industry gaps and empowering 
               individuals to transform their skills into sustainable income opportunities.
             </p>
+            <div className="mb-4">
+              <p className="text-brand-silver">
+                <span className="font-semibold">Email:</span> 
+                <a href="mailto:careercatalystcommunity@gmail.com" className="text-primary hover:underline ml-2">
+                  careercatalystcommunity@gmail.com
+                </a>
+              </p>
+            </div>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary"
+                onClick={() => window.open('https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ygh8fhi', '_blank')}
+              >
                 <Instagram className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary"
+                onClick={() => window.open('https://www.linkedin.com/company/ccclearntoearn/', '_blank')}
+              >
                 <Linkedin className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="icon" className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary"
+                onClick={() => window.open('https://chat.whatsapp.com/HA2OtWFBunc324bQFSUNuG', '_blank')}
+              >
+                <MessageCircle className="h-4 w-4" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="border-brand-silver text-brand-silver hover:bg-primary hover:border-primary"
+                onClick={() => window.open('mailto:careercatalystcommunity@gmail.com', '_blank')}
+              >
                 <Mail className="h-4 w-4" />
               </Button>
             </div>
@@ -42,11 +73,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-brand-silver hover:text-primary transition-colors duration-300">About Campaign</a></li>
-              <li><a href="#communities" className="text-brand-silver hover:text-primary transition-colors duration-300">Join Communities</a></li>
-              <li><a href="#collaborate" className="text-brand-silver hover:text-primary transition-colors duration-300">Collaborate</a></li>
-              <li><a href="#impact" className="text-brand-silver hover:text-primary transition-colors duration-300">Our Impact</a></li>
-              <li><a href="#contact" className="text-brand-silver hover:text-primary transition-colors duration-300">Contact</a></li>
+              <li><a href="/#skills" className="text-brand-silver hover:text-primary transition-colors duration-300">Skills & Communities</a></li>
+              <li><a href="/collaborators" className="text-brand-silver hover:text-primary transition-colors duration-300">Collaborators</a></li>
+              <li><a href="/testimonials" className="text-brand-silver hover:text-primary transition-colors duration-300">Testimonials</a></li>
+              <li><a href="/#communities" className="text-brand-silver hover:text-primary transition-colors duration-300">Join Communities</a></li>
+              <li><a href="/queries" className="text-brand-silver hover:text-primary transition-colors duration-300">Ask Queries</a></li>
             </ul>
           </div>
           
@@ -54,11 +85,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-primary">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#help" className="text-brand-silver hover:text-primary transition-colors duration-300">Help Center</a></li>
-              <li><a href="#partnership" className="text-brand-silver hover:text-primary transition-colors duration-300">Partnership</a></li>
-              <li><a href="#volunteer" className="text-brand-silver hover:text-primary transition-colors duration-300">Volunteer</a></li>
-              <li><a href="#privacy" className="text-brand-silver hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#terms" className="text-brand-silver hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+              <li><a href="https://chat.whatsapp.com/HA2OtWFBunc324bQFSUNuG" className="text-brand-silver hover:text-primary transition-colors duration-300">WhatsApp Support</a></li>
+              <li><a href="mailto:careercatalystcommunity@gmail.com" className="text-brand-silver hover:text-primary transition-colors duration-300">Email Support</a></li>
+              <li><a href="/#support" className="text-brand-silver hover:text-primary transition-colors duration-300">Support Our Vision</a></li>
+              <li><a href="/collaborators" className="text-brand-silver hover:text-primary transition-colors duration-300">Become a Partner</a></li>
+              <li><a href="/#communities" className="text-brand-silver hover:text-primary transition-colors duration-300">Join Movement</a></li>
             </ul>
           </div>
         </div>
