@@ -84,48 +84,53 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-32 bg-background">
+      <div className="w-full max-w-none px-8 lg:px-16">
+        {/* Hero-style heading section */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-oxford mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-oxford mb-8 leading-tight">
             Learn. Grow. <span className="text-primary">Earn.</span>
-          </h2>
-          <p className="text-lg text-brand-jet max-w-2xl mx-auto leading-relaxed mb-12">
-            Join specialized communities for each skill area and start your journey from learning to earning. 
-            Connect with experts, get resources, and grow your career.
-          </p>
-          <div className="bg-primary/5 rounded-xl p-8 max-w-5xl mx-auto border-l-4 border-primary shadow-lg">
-            <p className="text-xl font-bold text-brand-oxford mb-3">
-              This is a non-profit campaign dedicated to providing students with essential skills at no cost.
+          </h1>
+          
+          <div className="max-w-6xl mx-auto mb-16">
+            <p className="text-xl md:text-2xl lg:text-3xl text-brand-jet leading-relaxed mb-12 font-medium">
+              Join specialized communities for each skill area and start your journey from learning to earning. 
+              Connect with experts, get resources, and grow your career.
             </p>
-            <p className="text-brand-jet text-lg">
-              A social impact initiative by <span className="font-semibold text-brand-oxford">CCC Company</span> – redefining education for a brighter future.
-            </p>
+            
+            {/* Enhanced mission statement with brand identity */}
+            <div className="bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 rounded-2xl p-10 border-l-8 border-primary shadow-xl max-w-7xl mx-auto">
+              <p className="text-2xl md:text-3xl font-bold text-brand-oxford mb-6 leading-tight">
+                This is a non-profit campaign dedicated to providing students with essential skills at no cost.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-jet font-medium">
+                A social impact initiative by <span className="font-bold text-brand-oxford">CCC Company</span> – redefining education for a brighter future.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Desktop Layout - 8 cards in a row with full breadth */}
-        <div className="hidden lg:grid lg:grid-cols-8 gap-6 mb-12">
+        {/* Desktop Layout - Enhanced full-width cards */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-8 mb-16">
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/20"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-card border-border h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[420px]"
             >
-              <CardHeader className="text-center pb-4 px-4 flex-grow">
-                <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500`}>
-                  <skill.icon className="h-7 w-7" />
+              <CardHeader className="text-center pb-6 px-8 flex-grow">
+                <div className={`mx-auto mb-8 p-6 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
+                  <skill.icon className="h-12 w-12" />
                 </div>
-                <CardTitle className="text-base font-bold text-brand-oxford leading-tight mb-3 group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl font-bold text-brand-oxford leading-tight mb-6 group-hover:text-primary transition-colors duration-300 min-h-[60px] flex items-center justify-center">
                   {skill.title}
                 </CardTitle>
-                <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
+                <CardDescription className="text-brand-jet leading-relaxed text-lg flex-grow group-hover:text-brand-oxford transition-colors duration-300">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-center px-4 pb-6 mt-auto">
+              <CardContent className="text-center px-8 pb-8 mt-auto">
                 <Button 
-                  size="sm"
-                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-sm py-3 font-semibold hover:shadow-lg transform hover:scale-105"
+                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-lg py-6 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -135,18 +140,48 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Mobile/Tablet Layout - Carousel */}
-        <div className="lg:hidden">
+        {/* Tablet Layout - 3 cards per row */}
+        <div className="hidden md:grid lg:hidden md:grid-cols-3 gap-6 mb-16">
+          {skills.map((skill, index) => (
+            <Card 
+              key={index} 
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[400px]"
+            >
+              <CardHeader className="text-center pb-6 px-6 flex-grow">
+                <div className={`mx-auto mb-6 p-5 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
+                  <skill.icon className="h-10 w-10" />
+                </div>
+                <CardTitle className="text-lg font-bold text-brand-oxford leading-tight mb-4 group-hover:text-primary transition-colors duration-300 min-h-[50px] flex items-center justify-center">
+                  {skill.title}
+                </CardTitle>
+                <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
+                  {skill.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center px-6 pb-6 mt-auto">
+                <Button 
+                  className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                  onClick={() => handleJoinNow(skill.link)}
+                >
+                  Join Now
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Mobile Layout - Carousel for smaller screens */}
+        <div className="md:hidden">
           <Carousel className="w-full">
-            <CarouselContent className="-ml-3 md:-ml-4">
+            <CarouselContent className="-ml-4">
               {skills.map((skill, index) => (
-                <CarouselItem key={index} className="pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                  <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/20">
+                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2">
+                  <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/30 min-h-[380px]">
                     <CardHeader className="text-center pb-6 px-6 flex-grow">
-                      <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500`}>
+                      <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                         <skill.icon className="h-10 w-10" />
                       </div>
-                      <CardTitle className="text-xl font-bold text-brand-oxford mb-4 group-hover:text-primary transition-colors duration-300">
+                      <CardTitle className="text-xl font-bold text-brand-oxford mb-4 group-hover:text-primary transition-colors duration-300 min-h-[50px] flex items-center justify-center">
                         {skill.title}
                       </CardTitle>
                       <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
@@ -155,7 +190,7 @@ const SkillsSection = () => {
                     </CardHeader>
                     <CardContent className="text-center px-6 pb-6 mt-auto">
                       <Button 
-                        className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-4 font-semibold hover:shadow-lg transform hover:scale-105"
+                        className="w-full bg-brand-oxford hover:bg-primary text-card-foreground transition-all duration-300 text-base py-5 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                         onClick={() => handleJoinNow(skill.link)}
                       >
                         Join Now
