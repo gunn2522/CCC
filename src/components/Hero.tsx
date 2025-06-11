@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Target, Zap, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { ArrowRight, Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -70,6 +70,14 @@ const Hero = () => {
                 variant="ghost" 
                 size="icon" 
                 className="hover:bg-primary/10"
+                onClick={() => openLink('https://chat.whatsapp.com/HA2OtWFBunc324bQFSUNuG')}
+              >
+                <MessageCircle className="h-5 w-5 text-white hover:text-primary" />
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:bg-primary/10"
                 onClick={() => openLink('https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ygh8fhi')}
               >
                 <Instagram className="h-5 w-5 text-white hover:text-primary" />
@@ -88,74 +96,133 @@ const Hero = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-[60vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-primary rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 bg-primary rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-secondary rounded-full blur-lg"></div>
+      <section id="home" className="relative min-h-screen flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
+        {/* Enhanced Background pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-56 h-56 bg-primary rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-secondary rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
         
-        <div className="container mx-auto px-6 z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Learning to <span className="text-primary">Earning</span>
-            </h1>
+        <div className="w-full max-w-none px-8 lg:px-16 z-10">
+          <div className="text-center">
+            {/* Enhanced Main Heading */}
+            <div className="mb-8 animate-fade-in">
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
+                <span className="block text-white mb-4">Learning to</span>
+                <span className="block bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent drop-shadow-2xl">
+                  Earning
+                </span>
+              </h1>
+            </div>
             
-            <p className="text-xl md:text-2xl text-brand-cosmic mb-4 animate-fade-in">
-              A Non-Profit Initiative by Career Catalyst Community
-            </p>
+            {/* Enhanced Subheading */}
+            <div className="mb-12 animate-fade-in">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+                Transform Your Career Journey with Expert Guidance
+              </h2>
+              <p className="text-xl md:text-2xl text-brand-cosmic mb-4 font-medium">
+                A Non-Profit Initiative by Career Catalyst Community
+              </p>
+            </div>
             
-            <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Empowering freshers from underserved communities with career guidance, LinkedIn optimization, 
-              job preparation, and AI-powered growth strategies. From consultations to placements - we're here to help you succeed.
-            </p>
+            {/* Enhanced Content Structure */}
+            <div className="max-w-7xl mx-auto mb-16 animate-fade-in">
+              <p className="text-xl md:text-2xl text-secondary mb-12 leading-relaxed font-medium">
+                From Consultation to Placement - Your Success Story Starts Here
+              </p>
+              
+              {/* Key Benefits */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                  <span className="text-lg font-medium">LinkedIn Profile Optimization</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                  <span className="text-lg font-medium">AI-Powered Growth Strategies</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                  <span className="text-lg font-medium">Job Preparation & Placement</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                  <span className="text-lg font-medium">Career Guidance Support</span>
+                </div>
+              </div>
+            </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in mb-12">
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in mb-20">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl rounded-xl"
+                onClick={() => scrollToSection('skills')}
               >
                 Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg transition-all duration-300"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-12 py-6 text-xl font-bold transition-all duration-300 transform hover:scale-105 rounded-xl"
                 onClick={() => scrollToSection('queries')}
               >
                 Ask a Question
               </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-brand-oxford px-12 py-6 text-xl font-bold transition-all duration-300 transform hover:scale-105 rounded-xl"
+                onClick={() => navigateToPage('/testimonials')}
+              >
+                View Success Stories
+              </Button>
             </div>
             
-            {/* Impact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Users className="h-8 w-8 text-primary mr-2" />
-                  <span className="text-3xl font-bold text-primary">100%</span>
+            {/* Enhanced Impact Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 animate-fade-in">
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                  <div className="flex items-center justify-center mb-6">
+                    <Users className="h-12 w-12 text-primary mr-3" />
+                    <span className="text-6xl md:text-7xl font-bold text-primary">100%</span>
+                  </div>
+                  <p className="text-secondary text-xl font-medium">Non-Profit Mission</p>
                 </div>
-                <p className="text-secondary">Non-Profit Mission</p>
               </div>
               
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Target className="h-8 w-8 text-primary mr-2" />
-                  <span className="text-3xl font-bold text-primary">∞</span>
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                  <div className="flex items-center justify-center mb-6">
+                    <Target className="h-12 w-12 text-primary mr-3" />
+                    <span className="text-6xl md:text-7xl font-bold text-primary">∞</span>
+                  </div>
+                  <p className="text-secondary text-xl font-medium">Career Opportunities</p>
                 </div>
-                <p className="text-secondary">Career Opportunities</p>
               </div>
               
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Zap className="h-8 w-8 text-primary mr-2" />
-                  <span className="text-3xl font-bold text-primary">0₹</span>
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                  <div className="flex items-center justify-center mb-6">
+                    <Zap className="h-12 w-12 text-primary mr-3" />
+                    <span className="text-6xl md:text-7xl font-bold text-primary">0₹</span>
+                  </div>
+                  <p className="text-secondary text-xl font-medium">Cost to Join</p>
                 </div>
-                <p className="text-secondary">Cost to Join</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                  <div className="flex items-center justify-center mb-6">
+                    <CheckCircle className="h-12 w-12 text-primary mr-3" />
+                    <span className="text-6xl md:text-7xl font-bold text-primary">500+</span>
+                  </div>
+                  <p className="text-secondary text-xl font-medium">Success Stories</p>
+                </div>
               </div>
             </div>
           </div>
