@@ -93,10 +93,10 @@ const SkillsSection = () => {
           </h1>
           
           <div className="max-w-6xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl lg:text-2xl text-brand-jet leading-relaxed mb-8 font-medium">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl text-brand-jet leading-relaxed mb-8 font-medium">
               Join specialized communities for each skill area and start your journey from learning to earning. 
               Connect with experts, get resources, and grow your career.
-            </p>
+            </h3>
             
             {/* Enhanced mission statement with brand identity */}
             <div className="bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 rounded-2xl p-8 border-l-8 border-primary shadow-xl max-w-6xl mx-auto">
@@ -110,27 +110,27 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Desktop Layout - Enhanced smaller cards */}
+        {/* Desktop Layout - Enhanced cards with blue background */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-12">
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-card border-border h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[340px]"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-brand-oxford border-brand-oxford h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[340px]"
             >
               <CardHeader className="text-center pb-4 px-6 flex-grow">
                 <div className={`mx-auto mb-6 p-4 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <skill.icon className="h-8 w-8" />
                 </div>
-                <CardTitle className="text-xl font-bold text-brand-oxford leading-tight mb-4 group-hover:text-primary transition-colors duration-300 min-h-[48px] flex items-center justify-center">
+                <CardTitle className="text-2xl font-bold text-brand-cosmic leading-tight mb-4 group-hover:text-white transition-colors duration-300 min-h-[48px] flex items-center justify-center">
                   {skill.title}
                 </CardTitle>
-                <CardDescription className="text-brand-jet leading-relaxed text-base flex-grow group-hover:text-brand-oxford transition-colors duration-300">
+                <CardDescription className="text-brand-cosmic leading-relaxed text-base flex-grow group-hover:text-white transition-colors duration-300">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center px-6 pb-6 mt-auto">
                 <Button 
-                  className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-base py-4 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                  className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 text-base py-4 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -145,22 +145,22 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[320px]"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-brand-oxford border-brand-oxford h-full flex flex-col hover:border-primary/30 hover:scale-105 min-h-[320px]"
             >
               <CardHeader className="text-center pb-4 px-5 flex-grow">
                 <div className={`mx-auto mb-5 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                   <skill.icon className="h-7 w-7" />
                 </div>
-                <CardTitle className="text-lg font-bold text-brand-oxford leading-tight mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                <CardTitle className="text-xl font-bold text-brand-cosmic leading-tight mb-3 group-hover:text-white transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                   {skill.title}
                 </CardTitle>
-                <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
+                <CardDescription className="text-brand-cosmic leading-relaxed text-sm flex-grow group-hover:text-white transition-colors duration-300">
                   {skill.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center px-5 pb-5 mt-auto">
                 <Button 
-                  className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-sm py-3 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                  className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 text-sm py-3 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                   onClick={() => handleJoinNow(skill.link)}
                 >
                   Join Now
@@ -176,21 +176,21 @@ const SkillsSection = () => {
             <CarouselContent className="-ml-4">
               {skills.map((skill, index) => (
                 <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2">
-                  <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-card border-border h-full flex flex-col hover:border-primary/30 min-h-[300px]">
+                  <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-brand-oxford border-brand-oxford h-full flex flex-col hover:border-primary/30 min-h-[300px]">
                     <CardHeader className="text-center pb-4 px-5 flex-grow">
                       <div className={`mx-auto mb-4 p-3 rounded-full w-fit ${skill.color} group-hover:scale-125 transition-transform duration-500 shadow-lg`}>
                         <skill.icon className="h-7 w-7" />
                       </div>
-                      <CardTitle className="text-lg font-bold text-brand-oxford mb-3 group-hover:text-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                      <CardTitle className="text-lg font-bold text-brand-cosmic mb-3 group-hover:text-white transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                         {skill.title}
                       </CardTitle>
-                      <CardDescription className="text-brand-jet leading-relaxed text-sm flex-grow group-hover:text-brand-oxford transition-colors duration-300">
+                      <CardDescription className="text-brand-cosmic leading-relaxed text-sm flex-grow group-hover:text-white transition-colors duration-300">
                         {skill.description}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="text-center px-5 pb-5 mt-auto">
                       <Button 
-                        className="w-full bg-brand-oxford hover:bg-primary text-white transition-all duration-300 text-sm py-3 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
+                        className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 text-sm py-3 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                         onClick={() => handleJoinNow(skill.link)}
                       >
                         Join Now
