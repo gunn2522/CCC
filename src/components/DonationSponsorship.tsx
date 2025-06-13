@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Handshake, Users, Target, TrendingUp, Calendar, Users2, Zap } from "lucide-react";
@@ -10,28 +9,32 @@ const DonationSponsorship = () => {
       title: "Early Supporters",
       description: "Join our founding community of supporters. Every early contribution helps us build the foundation for impacting thousands of students.",
       cta: "Support Launch",
-      color: "bg-red-500/10 text-red-600"
+      color: "bg-red-500/10 text-red-600",
+      link: "https://forms.gle/LG7mkLNvX7qH2Sse8"
     },
     {
       icon: Handshake,
       title: "Launch Partners",
       description: "Partner with us from day one to create lasting impact. Help us establish credible, high-quality education programs.",
       cta: "Become Partner",
-      color: "bg-blue-500/10 text-blue-600"
+      color: "bg-blue-500/10 text-blue-600",
+      link: "https://forms.gle/hx2VoEdqTud1PAh98"
     },
     {
       icon: Users,
       title: "Mission Advocates",
       description: "Spread the word about our vision for free education. Help us build a community before we officially launch.",
       cta: "Join Movement",
-      color: "bg-green-500/10 text-green-600"
+      color: "bg-green-500/10 text-green-600",
+      link: "https://forms.gle/aTHiH1UbbUmmWNFp6"
     },
     {
       icon: Target,
       title: "Track Our Journey",
       description: "Follow our progress as we work toward impacting 50,000 students by 2025. Be part of the story from the beginning.",
       cta: "Follow Progress",
-      color: "bg-purple-500/10 text-purple-600"
+      color: "bg-purple-500/10 text-purple-600",
+      link: "https://forms.gle/954vRtNYtb4FE3uC9"
     }
   ];
 
@@ -94,9 +97,12 @@ const DonationSponsorship = () => {
               </CardHeader>
               <CardContent className="text-center px-6 pb-6 mt-auto">
                 <Button 
+                  asChild
                   className="w-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 text-base py-4 font-bold hover:shadow-xl transform hover:scale-105 rounded-xl"
                 >
-                  {card.cta}
+                  <a href={card.link} target="_blank" rel="noopener noreferrer">
+                    {card.cta}
+                  </a>
                 </Button>
               </CardContent>
             </Card>
