@@ -5,32 +5,32 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "School Student",
-      content: "CCC helped me optimize my LinkedIn profile and prepare for interviews. Within 2 months, I landed my dream job! Their AI-powered career guidance was exactly what I needed.",
+      name: "Harsh Rana",
+      role: "Third-year Student",
+      content: "I was completely lost about my career path when I joined CCC 10 days ago. Their LinkedIn optimization session was a game-changer! I learned how to present myself professionally and now I feel confident about my future. The one-on-one guidance really helped me understand industry expectations.",
       rating: 5,
-      image: "PS"
+      image: "HR"
     },
     {
-      name: "Rahul Kumar",
-      role: "LinkedIn User",
-      content: "Coming from a small town college, I had no idea about industry standards. CCC's mentorship and job preparation tips transformed my career prospects completely.",
-      rating: 5,
-      image: "RK"
-    },
-    {
-      name: "Anjali Patel",
+      name: "Ishan Chander",
       role: "College Student",
-      content: "The career consultation sessions were incredibly valuable. They helped me understand my strengths and guided me towards the right career path. Highly recommended!",
+      content: "Career Catalyst Community started just 2 weeks ago but they've already shown me a clear path forward. The live Instagram sessions on documentation for internships were incredibly practical. I finally know how to prepare proper documents and what companies actually look for.",
       rating: 5,
-      image: "AP"
+      image: "IC"
     },
     {
-      name: "Arjun Singh",
-      role: "LinkedIn User",
-      content: "CCC's approach to using AI for career growth is revolutionary. They don't just give advice, they provide practical tools and strategies that actually work.",
+      name: "Ishika Semwal",
+      role: "Third-tier College Student",
+      content: "Being from a small college, I never thought I could compete with students from top universities. CCC's LinkedIn connectivity sessions showed me how to build my network effectively. In just 15 days, I've connected with industry professionals and gained valuable insights about my field.",
       rating: 5,
-      image: "AS"
+      image: "IS"
+    },
+    {
+      name: "Sukhwinder Singh",
+      role: "Engineering Student",
+      content: "I was confused about whether to focus on technical skills or soft skills. CCC's personalized guidance through their social channels helped me create a balanced approach. Their documentation tips for internship applications were spot-on - I'm already applying with confidence now!",
+      rating: 5,
+      image: "SS"
     }
   ];
 
@@ -42,7 +42,8 @@ const Testimonials = () => {
             Success <span className="text-primary">Stories</span>
           </h2>
           <p className="text-xl md:text-2xl lg:text-3xl text-brand-jet max-w-6xl mx-auto leading-relaxed font-medium">
-            Real testimonials from freshers who transformed their careers with our guidance and support.
+            Real testimonials from students who found clarity and direction through our live sessions, 
+            LinkedIn guidance, and personalized career support - all within our first 15 days!
           </p>
         </div>
         

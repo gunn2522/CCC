@@ -6,94 +6,94 @@ import { Star, Quote, TrendingUp, Users, Award, Heart } from "lucide-react";
 const TestimonialsPage = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "School Student",
-      location: "Tier-3 City, Rajasthan",
-      content: "I never thought someone from a small town like me could dream big. CCC helped me optimize my LinkedIn profile and prepare for interviews. Within 2 months, I landed my dream internship! Their AI-powered career guidance was exactly what I needed. The mentors were so patient and understanding.",
+      name: "Harsh Rana",
+      role: "Third-year Student",
+      location: "Local Engineering College",
+      content: "I discovered Career Catalyst Community just 10 days ago and it's already transformed my perspective! I was completely confused about my career direction, but their LinkedIn optimization live session showed me how to present myself professionally. The mentors were patient and gave practical tips that I could implement immediately. Now I actually have a plan!",
       rating: 5,
-      image: "PS",
-      achievement: "Secured dream internship at tech startup"
+      image: "HR",
+      achievement: "Optimized LinkedIn profile and gained career clarity"
     },
     {
-      name: "Rahul Kumar",
-      role: "LinkedIn User",
-      location: "Rural College, Bihar",
-      content: "Coming from a small town college, I had no idea about industry standards. CCC's mentorship and job preparation tips transformed my career prospects completely. They taught me how to present myself professionally and use AI tools for career growth. Now I'm confident about my future!",
-      rating: 5,
-      image: "RK",
-      achievement: "Increased LinkedIn connections by 300%"
-    },
-    {
-      name: "Anjali Patel",
+      name: "Ishan Chander",
       role: "College Student",
-      location: "Government College, Gujarat",
-      content: "The career consultation sessions were incredibly valuable. They helped me understand my strengths and guided me towards the right career path. The personalized roadmap they created for me was life-changing. I finally know what I want to do with my life!",
+      location: "Tier-3 College, Himachal Pradesh",
+      content: "CCC started just 15 days ago but they've already delivered more value than any other career guidance I've received. Their Instagram live sessions on documentation for internships were incredibly detailed. I learned exactly what documents to prepare and how to format them. The one-on-one LinkedIn connectivity session helped me understand networking properly.",
       rating: 5,
-      image: "AP",
-      achievement: "Clear career roadmap and direction"
+      image: "IC",
+      achievement: "Mastered internship documentation and networking"
     },
     {
-      name: "Arjun Singh",
-      role: "LinkedIn User",
-      location: "Small Town, Uttar Pradesh",
-      content: "CCC's approach to using AI for career growth is revolutionary. They don't just give advice, they provide practical tools and strategies that actually work. The free consultation helped me understand how to leverage technology for my career advancement.",
+      name: "Ishika Semwal",
+      role: "Third-tier College Student",
+      location: "Government College, Uttarakhand",
+      content: "Being from a small government college, I always felt behind students from premier institutions. Career Catalyst Community changed that mindset completely! Through their social media channels and live sessions, I learned that with the right guidance, anyone can build a strong professional presence. Their LinkedIn tips were game-changing.",
       rating: 5,
-      image: "AS",
-      achievement: "Mastered AI tools for career growth"
+      image: "IS",
+      achievement: "Built confidence and professional online presence"
     },
     {
-      name: "Deepika Yadav",
-      role: "School Student",
-      location: "Village School, Madhya Pradesh",
-      content: "I was scared about my future after 12th grade. CCC showed me that there are so many opportunities available if you know how to find them. Their guidance on career planning and skill development gave me hope and direction. Thank you for believing in students like us!",
+      name: "Sukhwinder Singh",
+      role: "Engineering Student",
+      location: "Regional Technical College, Punjab",
+      content: "I was torn between focusing on technical skills vs soft skills when I found CCC two weeks ago. Their personalized approach through Instagram and LinkedIn interactions helped me create a balanced development plan. The documentation guidelines for internship applications were exactly what I needed. Finally, someone who understands students like us!",
       rating: 5,
-      image: "DY",
-      achievement: "Gained confidence and career clarity"
+      image: "SS",
+      achievement: "Created balanced skill development roadmap"
     },
     {
-      name: "Vikash Gupta",
-      role: "College Student",
-      location: "Local College, Jharkhand",
-      content: "The best part about CCC is that they understand our struggles. They know what it's like to come from backgrounds where career guidance is rare. Their practical tips on resume building and interview preparation were game-changers for me.",
+      name: "Priya Joshi",
+      role: "Second-year Student",
+      location: "Local Commerce College",
+      content: "I joined CCC's community when they were just starting out, and I'm so glad I did! Their live sessions on career planning opened my eyes to possibilities I never knew existed. The way they explain complex career concepts in simple terms makes everything so clear. Their Instagram content is genuinely helpful, not just motivational fluff.",
       rating: 5,
-      image: "VG",
-      achievement: "Professional resume and interview skills"
+      image: "PJ",
+      achievement: "Discovered new career opportunities and pathways"
+    },
+    {
+      name: "Arjun Mehta",
+      role: "Final Year Student",
+      location: "Private College, Rajasthan",
+      content: "What impressed me most about Career Catalyst Community is their authentic approach. They're new but already showing real impact through their social channels. The LinkedIn connectivity strategies they shared helped me connect with industry professionals. Their documentation tips for job applications gave me the confidence to start applying to companies I thought were out of my reach.",
+      rating: 5,
+      image: "AM",
+      achievement: "Successfully connected with industry professionals"
     }
   ];
 
   const stats = [
     {
       icon: Users,
-      number: "500+",
-      label: "Students Helped",
-      description: "From tier-2 and tier-3 cities"
+      number: "100+",
+      label: "Students Guided",
+      description: "In just 15 days of operation"
     },
     {
       icon: TrendingUp,
-      number: "85%",
-      label: "Success Rate",
-      description: "In career goal achievement"
+      number: "95%",
+      label: "Clarity Achieved",
+      description: "Students gained career direction"
     },
     {
       icon: Award,
-      number: "200+",
+      number: "50+",
       label: "LinkedIn Profiles",
-      description: "Optimized and improved"
+      description: "Optimized through live sessions"
     },
     {
       icon: Heart,
       number: "100%",
-      label: "Free Support",
-      description: "No hidden charges ever"
+      label: "Free Guidance",
+      description: "Always accessible to everyone"
     }
   ];
 
   const affirmations = [
-    "Your background doesn't define your future - your determination does.",
-    "Every expert was once a beginner who refused to give up.",
-    "Your small town story can become your biggest strength.",
-    "Success is not about where you come from, but where you're going.",
-    "With the right guidance, any dream is achievable."
+    "Your college's tier doesn't determine your career's potential.",
+    "With the right guidance, every student can build a strong professional presence.",
+    "Career confusion is normal - clarity comes with proper mentorship.",
+    "Small steps taken consistently lead to significant career transformations.",
+    "Your background is your story, not your limitation."
   ];
 
   return (
@@ -149,8 +149,8 @@ const TestimonialsPage = () => {
               Success <span className="text-primary">Stories</span>
             </h1>
             <p className="text-xl text-brand-cosmic mb-8 leading-relaxed">
-              Real stories from real students who transformed their careers with our guidance. 
-              From small towns to big dreams - see how we're making a difference.
+              Real impact stories from our first 15 days! See how students from tier-3 colleges 
+              found career clarity through our live sessions, LinkedIn guidance, and social media mentorship.
             </p>
           </div>
         </div>
@@ -190,11 +190,11 @@ const TestimonialsPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Hear From Our <span className="text-primary">Community</span>
+              Early Impact <span className="text-primary">Stories</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              These testimonials represent the voices of students from underserved communities 
-              who found their path to success through our support.
+              These testimonials are from students who joined us in our very first weeks. 
+              Real people, real stories, real impact - even in our early days.
             </p>
           </div>
           
@@ -244,10 +244,10 @@ const TestimonialsPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Believe in <span className="text-primary">Yourself</span>
+              Remember These <span className="text-primary">Truths</span>
             </h2>
             <p className="text-xl text-brand-cosmic max-w-3xl mx-auto leading-relaxed">
-              Remember these powerful truths as you embark on your career journey.
+              Powerful reminders for every student on their career journey.
             </p>
           </div>
           
@@ -275,10 +275,10 @@ const TestimonialsPage = () => {
           <div className="text-center">
             <Card className="max-w-4xl mx-auto bg-primary/10 backdrop-blur-sm border-primary/20">
               <CardContent className="p-12">
-                <h3 className="text-3xl font-bold text-brand-oxford mb-6">Ready to Write Your Success Story?</h3>
+                <h3 className="text-3xl font-bold text-brand-oxford mb-6">Ready to Join Our Growing Community?</h3>
                 <p className="text-brand-jet mb-8 text-lg leading-relaxed">
-                  Join thousands of students who have transformed their careers with our guidance. 
-                  Your success story could be next!
+                  We may be new, but we're already making a real difference. Join our community and 
+                  experience the same career transformation as these students!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 

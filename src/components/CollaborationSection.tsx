@@ -91,10 +91,13 @@ const CollaborationSection = () => {
                 </div>
                 
                 <Button 
+                  asChild
                   className="w-full brand-oxford hover:bg-brand-oxford/90 text-white transition-all duration-300 group-hover:scale-105 mt-auto"
                 >
-                  {collab.cta}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <a href="https://forms.gle/bd4ekBjywP15MbFH7" target="_blank" rel="noopener noreferrer">
+                    {collab.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -124,12 +127,14 @@ const CollaborationSection = () => {
                 and be part of our exclusive brand launch event as a valued partner.
               </p>
               <Button 
+                asChild
                 size="lg" 
                 className="brand-oxford hover:bg-brand-oxford/90 text-white px-8 py-4 transition-all duration-300 transform hover:scale-105"
-                onClick={navigateToCollaborators}
               >
-                Become a Partner
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <a href="/collaborators">
+                  Become a Partner
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </CardContent>
           </Card>
