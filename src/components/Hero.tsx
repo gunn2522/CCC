@@ -1,8 +1,30 @@
 
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentHeadline, setCurrentHeadline] = useState(0);
+  
+  const eyeCatchingHeadlines = [
+    "🚨 First Time in History: A Free Growth Community for All 🚀",
+    "📢 Never Done Before: Learn. Grow. Rise — At Almost Zero Cost!",
+    "💥 A Historic First: Career Growth & Mentorship Without the Price Tag",
+    "⚡ First of Its Kind: A Free Community Built to Uplift Everyone",
+    "🚀 India's First Free Skill-Building Community is HERE!",
+    "💜 Where Dreams Don't Need a Budget — A First in the World",
+    "🌟 For the First Time Ever: Growth is Free, and It's Loveable",
+    "🌍 Breaking Barriers, Making History — One Free Member at a Time",
+    "🛑 Stop Paying to Grow — Join the First Free Impact-Driven Community"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeadline((prev) => (prev + 1) % eyeCatchingHeadlines.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -95,8 +117,19 @@ const Hero = () => {
         </div>
       </nav>
 
+      {/* Eye-Catching Rotating Banner */}
+      <div className="fixed top-20 left-0 right-0 z-40 bg-gradient-to-r from-primary via-secondary to-primary py-3 shadow-lg">
+        <div className="w-full max-w-none px-8 lg:px-16">
+          <div className="text-center">
+            <p className="text-white font-bold text-lg md:text-xl animate-pulse">
+              {eyeCatchingHeadlines[currentHeadline]}
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
+      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32">
         {/* Enhanced Background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -106,6 +139,15 @@ const Hero = () => {
         
         <div className="w-full max-w-none px-8 lg:px-16 z-10">
           <div className="text-center">
+            {/* Historic Achievement Badge */}
+            <div className="mb-8 animate-fade-in">
+              <div className="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-full border-4 border-white/20 mb-6">
+                <p className="text-white font-bold text-xl md:text-2xl">
+                  🌟 HISTORY IN THE MAKING 🌟
+                </p>
+              </div>
+            </div>
+            
             {/* Enhanced Main Heading - Single Line */}
             <div className="mb-8 animate-fade-in">
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
@@ -115,16 +157,16 @@ const Hero = () => {
               </h1>
             </div>
             
-            {/* Enhanced Subheading */}
+            {/* Enhanced Subheading with Historic Elements */}
             <div className="mb-8 animate-fade-in">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                Transform Your Career Journey with Expert Guidance
+                🚀 India's First FREE Career Transformation Platform
               </h2>
               <p className="text-xl md:text-2xl text-brand-cosmic mb-6 font-medium">
-                From Consultation to Placement - Your Success Story Starts Here
+                💥 Where Dreams Don't Need a Budget — Growth is Finally FREE!
               </p>
               <p className="text-lg md:text-xl text-secondary mb-3 font-medium">
-                A Non-Profit Initiative by Career Catalyst Community
+                🌍 Breaking Barriers, Making History — One Free Member at a Time
               </p>
             </div>
             

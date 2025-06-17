@@ -23,6 +23,15 @@ const FoundersDesk = () => {
   return (
     <section id="founders-desk" className="py-20 bg-background">
       <div className="w-full max-w-none px-8 lg:px-16">
+        {/* Eye-catching banner */}
+        <div className="text-center mb-8">
+          <div className="bg-gradient-to-r from-primary to-secondary py-4 px-8 rounded-2xl border-4 border-primary/20 shadow-2xl max-w-4xl mx-auto">
+            <p className="text-white font-bold text-xl md:text-2xl animate-pulse">
+              ⚡ First of Its Kind: A Free Community Built to Uplift Everyone
+            </p>
+          </div>
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-oxford mb-8">
             From Founder's <span className="text-primary">Desk</span>
@@ -66,6 +75,15 @@ const FoundersDesk = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Bottom eye-catching message */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-secondary to-primary py-4 px-8 rounded-2xl border-4 border-secondary/20 shadow-2xl max-w-5xl mx-auto">
+            <p className="text-white font-bold text-lg md:text-xl animate-pulse">
+              📢 Never Done Before: Learn. Grow. Rise — At Almost Zero Cost!
+            </p>
+          </div>
         </div>
       </div>
     </section>
