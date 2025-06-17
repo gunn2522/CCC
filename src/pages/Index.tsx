@@ -6,6 +6,7 @@ import CommunityLinks from "@/components/CommunityLinks";
 import DonationSponsorship from "@/components/DonationSponsorship";
 import CollaborationSection from "@/components/CollaborationSection";
 import FoundersDesk from "@/components/FoundersDesk";
+import CareersSection from "@/components/CareersSection";
 import Testimonials from "@/components/Testimonials";
 import QueriesSection from "@/components/QueriesSection";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ const Index = () => {
       <DonationSponsorship />
       <CollaborationSection />
       <FoundersDesk />
+      <CareersSection />
       <Testimonials />
       <QueriesSection />
       <Footer />
