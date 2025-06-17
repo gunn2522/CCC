@@ -139,10 +139,10 @@ const Hero = () => {
         
         <div className="w-full max-w-none px-8 lg:px-16 z-10">
           <div className="text-center">
-            {/* Historic Achievement Badge */}
-            <div className="mb-8 animate-fade-in">
-              <div className="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-full border-4 border-white/20 mb-6">
-                <p className="text-white font-bold text-xl md:text-2xl">
+            {/* Historic Achievement Badge - Moved down with proper spacing and animations */}
+            <div className="mb-16 animate-fade-in">
+              <div className="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-6 rounded-full border-4 border-white/20 mb-6 transform hover:scale-110 transition-all duration-500 animate-pulse hover:animate-none shadow-2xl hover:shadow-primary/50">
+                <p className="text-white font-bold text-xl md:text-2xl animate-bounce">
                   🌟 HISTORY IN THE MAKING 🌟
                 </p>
               </div>
@@ -151,7 +151,7 @@ const Hero = () => {
             {/* Enhanced Main Heading - Single Line */}
             <div className="mb-8 animate-fade-in">
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl">
+                <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
                   Learning to Earning
                 </span>
               </h1>
