@@ -6,13 +6,13 @@ const FoundersDesk = () => {
   const founders = [
     {
       name: "Gunn Malhotra",
-      role: "CEO & Co-Founder",
+      role: "CEO & Founder",
       image: "/lovable-uploads/7adfc252-a554-4053-9df4-249d3847da2b.png",
       message: "Our vision at Career Catalyst Community is to bridge the gap between academic learning and industry expectations. Every student, regardless of their college tier, deserves access to quality career guidance. We're building a platform where confusion transforms into clarity, and potential becomes achievement.",
       type: "vision"
     },
     {
-      name: "Co-Founder",
+      name: "Arshpreet Singh",
       role: "COO & Co-Founder", 
       image: "/lovable-uploads/8e00b038-d236-45fc-9363-9a3ed25ffafe.png",
       message: "Starting this journey has been incredibly rewarding. In just 15 days, we've seen students discover their paths, optimize their professional presence, and gain confidence in their career choices. This is just the beginning - together, we're creating a movement that empowers every student to reach their full potential.",
@@ -44,7 +44,7 @@ const FoundersDesk = () => {
                     <img 
                       src={founder.image} 
                       alt={founder.name}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${index === 1 ? 'object-top' : ''}`}
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-brand-oxford mb-2">{founder.name}</h3>
