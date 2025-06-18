@@ -11,21 +11,12 @@ const CareersSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="w-full max-w-none px-8 lg:px-16">
-        {/* Eye-catching banner */}
-        <div className="text-center mb-8">
-          <div className="bg-gradient-to-r from-primary to-secondary py-4 px-8 rounded-2xl border-4 border-primary/20 shadow-2xl max-w-4xl mx-auto">
-            <p className="text-white font-bold text-xl md:text-2xl animate-pulse">
-              💜 Where Dreams Don't Need a Budget — A First in the World
-            </p>
-          </div>
-        </div>
-
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-oxford mb-8">
             Join Our <span className="text-primary">Team</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-jet max-w-4xl mx-auto leading-relaxed font-medium">
-            🚀 Looking for valuable experience? Join India's First Free Career Community as an intern and 
+            Looking for valuable experience? Join Career Catalyst Community as an intern and 
             be part of our mission to bridge industry gaps.
           </p>
         </div>
@@ -39,7 +30,7 @@ const CareersSection = () => {
                 </div>
                 <h3 className="text-3xl font-bold text-brand-oxford mb-4">Internship Opportunities</h3>
                 <p className="text-brand-jet leading-relaxed text-lg">
-                  🌟 Gain hands-on experience while making a real impact in the career development space. 
+                  Gain hands-on experience while making a real impact in the career development space. 
                   Work with our passionate team to help students across India find their career paths.
                 </p>
               </div>
@@ -97,15 +88,6 @@ const CareersSection = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Bottom eye-catching message */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-secondary to-primary py-4 px-8 rounded-2xl border-4 border-secondary/20 shadow-2xl max-w-5xl mx-auto">
-            <p className="text-white font-bold text-lg md:text-xl animate-pulse">
-              🌍 Breaking Barriers, Making History — One Free Member at a Time
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -85,15 +86,6 @@ const SkillsSection = () => {
   return (
     <section className="py-24 brand-cosmic">
       <div className="w-full max-w-none px-8 lg:px-16">
-        {/* Eye-catching banner */}
-        <div className="text-center mb-8">
-          <div className="bg-gradient-to-r from-primary to-secondary py-4 px-8 rounded-2xl border-4 border-primary/20 shadow-2xl max-w-4xl mx-auto mb-8">
-            <p className="text-white font-bold text-xl md:text-2xl animate-pulse">
-              💥 A Historic First: Career Growth & Mentorship Without the Price Tag
-            </p>
-          </div>
-        </div>
-
         {/* Hero-style heading section */}
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-brand-oxford mb-6 leading-tight">
@@ -102,14 +94,14 @@ const SkillsSection = () => {
           
           <div className="max-w-6xl mx-auto mb-12">
             <h3 className="text-2xl md:text-3xl lg:text-4xl text-brand-jet leading-relaxed mb-8 font-medium">
-              🚀 Join India's First Free Skill-Building Community and start your journey from learning to earning. 
+              Join specialized communities for each skill area and start your journey from learning to earning. 
               Connect with experts, get resources, and grow your career.
             </h3>
             
             {/* Enhanced mission statement with brand identity */}
             <div className="bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 rounded-2xl p-8 border-l-8 border-primary shadow-xl max-w-6xl mx-auto">
               <p className="text-xl md:text-2xl font-bold text-brand-oxford mb-4 leading-tight">
-                🌟 For the First Time Ever: Growth is Free, and It's Loveable
+                This is a non-profit campaign dedicated to providing students with essential skills at no cost.
               </p>
               <p className="text-lg md:text-xl text-brand-jet font-medium">
                 A social impact initiative by <span className="font-bold text-brand-oxford">CCC Company</span> – redefining education for a brighter future.
@@ -211,15 +203,6 @@ const SkillsSection = () => {
             <CarouselPrevious className="hidden sm:flex" />
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
-        </div>
-
-        {/* Bottom eye-catching message */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-secondary to-primary py-4 px-8 rounded-2xl border-4 border-secondary/20 shadow-2xl max-w-5xl mx-auto">
-            <p className="text-white font-bold text-lg md:text-xl animate-pulse">
-              🛑 Stop Paying to Grow — Join the First Free Impact-Driven Community
-            </p>
-          </div>
         </div>
       </div>
     </section>
