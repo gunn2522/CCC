@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -128,8 +127,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-[90vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 pb-8">
+      {/* Hero Section - Compact Design */}
+      <section id="home" className="relative h-screen flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 pb-16">
         {/* Enhanced Background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -137,89 +136,80 @@ const Hero = () => {
           <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-secondary rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
         
-        <div className="w-full max-w-none px-8 lg:px-16 z-10">
-          <div className="text-center">
+        <div className="w-full max-w-7xl mx-auto px-8 lg:px-16 z-10">
+          {/* 2-Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
-            {/* Enhanced Main Heading - Single Line */}
-            <div className="mb-8 animate-fade-in">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
-                  Learning to Earning
-                </span>
-              </h1>
-            </div>
-            
-            {/* Enhanced Subheading */}
-            <div className="mb-8 animate-fade-in">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                🚀 India's First FREE Career Transformation Platform
-              </h2>
-              <p className="text-lg md:text-xl text-secondary mb-3 font-medium">
-                ⚡ First of Its Kind: A Free Community Built to Uplift Everyone
-              </p>
-            </div>
-            
-            {/* Key Benefits */}
-            <div className="max-w-6xl mx-auto mb-8 animate-fade-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">LinkedIn Profile Optimization</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">AI-Powered Growth Strategies</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">Job Preparation & Placement</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">Career Guidance Support</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Enhanced Impact Stats with reduced spacing */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-fade-in">
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <Users className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">100%</span>
-                  </div>
-                  <p className="text-secondary text-lg font-medium">Non-Profit Mission</p>
-                </div>
+            {/* Left Column - Text Content */}
+            <div className="text-center lg:text-left">
+              {/* Main Heading - Reduced Size */}
+              <div className="mb-6 animate-fade-in">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
+                    Learning to Earning
+                  </span>
+                </h1>
               </div>
               
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <Target className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">∞</span>
-                  </div>
-                  <p className="text-secondary text-lg font-medium">Career Opportunities</p>
+              {/* Subheading - Reduced Size */}
+              <div className="mb-6 animate-fade-in">
+                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary mb-3">
+                  🚀 India's First FREE Career Transformation Platform
+                </h2>
+                <p className="text-base md:text-lg text-secondary font-medium">
+                  ⚡ First of Its Kind: A Free Community Built to Uplift Everyone
+                </p>
+              </div>
+
+              {/* Stats Row - Compact Single Line */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6 animate-fade-in">
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-primary/20">
+                  <Users className="h-5 w-5 text-primary" />
+                  <span className="text-lg font-bold text-primary">100%</span>
+                  <span className="text-sm text-secondary">Non-Profit</span>
+                </div>
+                
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-primary/20">
+                  <Target className="h-5 w-5 text-primary" />
+                  <span className="text-lg font-bold text-primary">∞</span>
+                  <span className="text-sm text-secondary">Opportunities</span>
+                </div>
+                
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-primary/20">
+                  <Zap className="h-5 w-5 text-primary" />
+                  <span className="text-lg font-bold text-primary">0₹</span>
+                  <span className="text-sm text-secondary">Cost</span>
+                </div>
+                
+                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-primary/20">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-lg font-bold text-primary">50K</span>
+                  <span className="text-sm text-secondary">Goal 2025</span>
                 </div>
               </div>
-              
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <Zap className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">0₹</span>
-                  </div>
-                  <p className="text-secondary text-lg font-medium">Cost to Join</p>
+            </div>
+            
+            {/* Right Column - Feature Boxes in 2x2 Grid */}
+            <div className="animate-fade-in">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col items-center justify-center space-y-2 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 min-h-[120px]">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                  <span className="text-sm font-medium text-center leading-tight">LinkedIn Profile Optimization</span>
                 </div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
-                  <div className="flex items-center justify-center mb-4">
-                    <CheckCircle className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">50K</span>
-                  </div>
-                  <p className="text-secondary text-lg font-medium">Goal for 2025</p>
+                
+                <div className="flex flex-col items-center justify-center space-y-2 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 min-h-[120px]">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                  <span className="text-sm font-medium text-center leading-tight">AI-Powered Growth Strategies</span>
+                </div>
+                
+                <div className="flex flex-col items-center justify-center space-y-2 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 min-h-[120px]">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                  <span className="text-sm font-medium text-center leading-tight">Job Preparation & Placement</span>
+                </div>
+                
+                <div className="flex flex-col items-center justify-center space-y-2 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 min-h-[120px]">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                  <span className="text-sm font-medium text-center leading-tight">Career Guidance Support</span>
                 </div>
               </div>
             </div>
