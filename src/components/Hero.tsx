@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -129,7 +128,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32">
+      <section id="home" className="relative min-h-[90vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 pb-16">
         {/* Enhanced Background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -139,14 +138,6 @@ const Hero = () => {
         
         <div className="w-full max-w-none px-8 lg:px-16 z-10">
           <div className="text-center">
-            {/* Historic Achievement Badge - Moved down with proper spacing and animations */}
-            <div className="mb-16 animate-fade-in">
-              <div className="inline-block bg-gradient-to-r from-primary to-secondary px-8 py-6 rounded-full border-4 border-white/20 mb-6 transform hover:scale-110 transition-all duration-500 animate-pulse hover:animate-none shadow-2xl hover:shadow-primary/50">
-                <p className="text-white font-bold text-xl md:text-2xl animate-bounce">
-                  🌟 HISTORY IN THE MAKING 🌟
-                </p>
-              </div>
-            </div>
             
             {/* Enhanced Main Heading - Single Line */}
             <div className="mb-8 animate-fade-in">
@@ -193,7 +184,7 @@ const Hero = () => {
             </div>
             
             {/* Enhanced Impact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in mb-16">
               <div className="text-center group">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-center mb-4">
