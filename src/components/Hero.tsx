@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -128,7 +129,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[90vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 pb-16">
+      <section id="home" className="relative min-h-[90vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 pb-8">
         {/* Enhanced Background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -148,21 +149,18 @@ const Hero = () => {
               </h1>
             </div>
             
-            {/* Enhanced Subheading with Historic Elements */}
+            {/* Enhanced Subheading */}
             <div className="mb-8 animate-fade-in">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
                 🚀 India's First FREE Career Transformation Platform
               </h2>
-              <p className="text-xl md:text-2xl text-brand-cosmic mb-6 font-medium">
-                💥 Where Dreams Don't Need a Budget — Growth is Finally FREE!
-              </p>
               <p className="text-lg md:text-xl text-secondary mb-3 font-medium">
-                🌍 Breaking Barriers, Making History — One Free Member at a Time
+                ⚡ First of Its Kind: A Free Community Built to Uplift Everyone
               </p>
             </div>
             
             {/* Key Benefits */}
-            <div className="max-w-6xl mx-auto mb-12 animate-fade-in">
+            <div className="max-w-6xl mx-auto mb-8 animate-fade-in">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -183,10 +181,10 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Enhanced Impact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in mb-16">
+            {/* Enhanced Impact Stats with reduced spacing */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-fade-in">
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
                   <div className="flex items-center justify-center mb-4">
                     <Users className="h-10 w-10 text-primary mr-3" />
                     <span className="text-4xl md:text-5xl font-bold text-primary">100%</span>
@@ -196,7 +194,7 @@ const Hero = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
                   <div className="flex items-center justify-center mb-4">
                     <Target className="h-10 w-10 text-primary mr-3" />
                     <span className="text-4xl md:text-5xl font-bold text-primary">∞</span>
@@ -206,7 +204,7 @@ const Hero = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
                   <div className="flex items-center justify-center mb-4">
                     <Zap className="h-10 w-10 text-primary mr-3" />
                     <span className="text-4xl md:text-5xl font-bold text-primary">0₹</span>
@@ -216,7 +214,7 @@ const Hero = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 h-full flex flex-col justify-center">
                   <div className="flex items-center justify-center mb-4">
                     <CheckCircle className="h-10 w-10 text-primary mr-3" />
                     <span className="text-4xl md:text-5xl font-bold text-primary">50K</span>
