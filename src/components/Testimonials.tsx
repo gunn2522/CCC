@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
@@ -35,13 +34,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-32 brand-cosmic">
-      <div className="w-full max-w-none px-8 lg:px-16">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-oxford mb-8">
+    <section id="testimonials" className="py-16 md:py-32 brand-cosmic">
+      <div className="w-full px-4 md:px-8 lg:px-16">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-brand-oxford mb-4 md:mb-8">
             Success <span className="text-primary">Stories</span>
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-brand-jet max-w-6xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-brand-jet max-w-6xl mx-auto leading-relaxed font-medium">
             Real testimonials from students who found clarity and direction through our live sessions, 
             LinkedIn guidance, and personalized career support - all within our first 15 days!
           </p>

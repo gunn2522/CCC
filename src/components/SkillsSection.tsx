@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -84,26 +83,26 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="py-24 brand-cosmic">
-      <div className="w-full max-w-none px-8 lg:px-16">
+    <section className="py-12 md:py-24 brand-cosmic">
+      <div className="w-full px-4 md:px-8 lg:px-16">
         {/* Hero-style heading section */}
-        <div className="text-center mb-16">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-brand-oxford mb-6 leading-tight">
+        <div className="text-center mb-8 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-brand-oxford mb-4 md:mb-6 leading-tight">
             Learn. Grow. <span className="text-primary">Earn.</span>
           </h1>
           
-          <div className="max-w-6xl mx-auto mb-12">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl text-brand-jet leading-relaxed mb-8 font-medium">
+          <div className="max-w-6xl mx-auto mb-8 md:mb-12">
+            <h3 className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-brand-jet leading-relaxed mb-4 md:mb-8 font-medium">
               Join specialized communities for each skill area and start your journey from learning to earning. 
               Connect with experts, get resources, and grow your career.
             </h3>
             
             {/* Enhanced mission statement with brand identity */}
-            <div className="bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 rounded-2xl p-8 border-l-8 border-primary shadow-xl max-w-6xl mx-auto">
-              <p className="text-xl md:text-2xl font-bold text-brand-oxford mb-4 leading-tight">
+            <div className="bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 rounded-2xl p-4 md:p-8 border-l-8 border-primary shadow-xl max-w-6xl mx-auto">
+              <p className="text-base md:text-xl lg:text-2xl font-bold text-brand-oxford mb-2 md:mb-4 leading-tight">
                 This is a non-profit campaign dedicated to providing students with essential skills at no cost.
               </p>
-              <p className="text-lg md:text-xl text-brand-jet font-medium">
+              <p className="text-sm md:text-lg lg:text-xl text-brand-jet font-medium">
                 A social impact initiative by <span className="font-bold text-brand-oxford">CCC Company</span> – redefining education for a brighter future.
               </p>
             </div>

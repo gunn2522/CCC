@@ -66,19 +66,19 @@ const DonationSponsorship = () => {
   ];
 
   return (
-    <section id="support" className="py-20 brand-cosmic">
-      <div className="w-full max-w-none px-8 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-oxford mb-6">
+    <section id="support" className="py-12 md:py-20 brand-cosmic">
+      <div className="w-full px-4 md:px-8 lg:px-16">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-brand-oxford mb-4 md:mb-6">
             Support Our <span className="text-primary">Mission</span>
           </h2>
-          <p className="text-xl md:text-2xl text-brand-jet max-w-6xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-2xl text-brand-jet max-w-6xl mx-auto leading-relaxed font-medium">
             Help us launch free, quality education for students worldwide. Be part of building something 
             that will transform careers and change lives. Your early support makes our ambitious vision possible.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-16">
           {supportCards.map((card, index) => (
             <Card 
               key={index} 
@@ -110,11 +110,11 @@ const DonationSponsorship = () => {
         </div>
 
         {/* Why Start with Us Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-primary/5 via-brand-cosmic to-primary/5 border-l-8 border-primary shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-brand-oxford mb-6">Why Start with Us</h3>
-              <p className="text-lg md:text-xl text-brand-jet leading-relaxed">
+            <CardContent className="p-4 md:p-8">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-oxford mb-4 md:mb-6">Why Start with Us</h3>
+              <p className="text-sm md:text-lg lg:text-xl text-brand-jet leading-relaxed">
                 Every early supporter helps us build the foundation for a revolutionary education platform. 
                 Your contribution today will directly fund our initial programs, technology development, and 
                 outreach to underserved communities. Together, we're not just planning education—we're 
@@ -125,7 +125,7 @@ const DonationSponsorship = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105 shadow-lg">

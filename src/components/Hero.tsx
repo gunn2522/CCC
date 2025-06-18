@@ -1,8 +1,10 @@
-
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle } from "lucide-react";
+import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle, Menu } from "lucide-react";
 
 const Hero = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -19,21 +21,22 @@ const Hero = () => {
     <>
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 brand-oxford border-b border-border">
-        <div className="w-full max-w-none px-8 lg:px-16 py-4">
+        <div className="w-full px-4 md:px-8 lg:px-16 py-3 md:py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+            {/* Logo and Brand */}
+            <div className="flex items-center space-x-2 md:space-x-4">
               <img 
                 src="/lovable-uploads/09f2d9a3-de1d-40b3-9c16-39796000e75e.png" 
                 alt="CCC Logo" 
-                className="w-12 h-12"
+                className="w-8 h-8 md:w-12 md:h-12"
               />
-              <div>
-                <h1 className="text-2xl font-bold text-white">Career Catalyst Community</h1>
-                <p className="text-base text-brand-cosmic">Learning to Earning Campaign</p>
+              <div className="min-w-0">
+                <h1 className="text-sm md:text-xl lg:text-2xl font-bold text-white truncate">Career Catalyst Community</h1>
+                <p className="text-xs md:text-sm lg:text-base text-brand-cosmic truncate">Learning to Earning Campaign</p>
               </div>
             </div>
             
-            {/* Navigation Menu */}
+            {/* Desktop Navigation Menu */}
             <div className="hidden md:flex items-center space-x-6">
               <Button 
                 variant="ghost" 
@@ -65,7 +68,8 @@ const Hero = () => {
               </Button>
             </div>
             
-            <div className="flex items-center space-x-4">
+            {/* Desktop Social Media */}
+            <div className="hidden md:flex items-center space-x-4">
               <Button 
                 variant="ghost" 
                 size="icon" 
@@ -91,12 +95,62 @@ const Hero = () => {
                 <Linkedin className="h-5 w-5 text-white hover:text-primary" />
               </Button>
             </div>
+            
+            {/* Mobile Hamburger */}
+            <div className="md:hidden">
+              <Button variant="ghost" size="icon" className="text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                <Menu className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
+          
+          {/* Mobile Menu Dropdown */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-3 bg-brand-oxford rounded-lg shadow-lg p-4 flex flex-col space-y-3">
+              <div className="flex flex-col space-y-2">
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { scrollToSection('home'); setMobileMenuOpen(false); }}>Home</Button>
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/collaborators'); setMobileMenuOpen(false); }}>Collaborators</Button>
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/testimonials'); setMobileMenuOpen(false); }}>Testimonials</Button>
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/queries'); setMobileMenuOpen(false); }}>Ask Queries</Button>
+              </div>
+              
+              {/* Mobile Social Media */}
+              <div className="border-t border-white/20 pt-3">
+                <p className="text-xs text-brand-cosmic mb-2">Connect with us:</p>
+                <div className="flex space-x-3">
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="hover:bg-primary/10"
+                    onClick={() => { openLink('https://chat.whatsapp.com/HA2OtWFBunc324bQFSUNuG'); setMobileMenuOpen(false); }}
+                  >
+                    <MessageCircle className="h-4 w-4 text-white hover:text-primary" />
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="hover:bg-primary/10"
+                    onClick={() => { openLink('https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ygh8fhi'); setMobileMenuOpen(false); }}
+                  >
+                    <Instagram className="h-4 w-4 text-white hover:text-primary" />
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="hover:bg-primary/10"
+                    onClick={() => { openLink('https://www.linkedin.com/company/ccclearntoearn/'); setMobileMenuOpen(false); }}
+                  >
+                    <Linkedin className="h-4 w-4 text-white hover:text-primary" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-20">
+      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 md:pt-24 lg:pt-20">
         {/* Enhanced Background pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
@@ -104,11 +158,11 @@ const Hero = () => {
           <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-secondary rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
         
-        <div className="w-full max-w-none px-8 lg:px-16 z-10">
+        <div className="w-full px-4 md:px-8 lg:px-16 z-10">
           <div className="text-center">
             {/* Enhanced Main Heading - Single Line */}
             <div className="mb-8 animate-fade-in">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl">
                   Learning to Earning
                 </span>
@@ -117,13 +171,13 @@ const Hero = () => {
             
             {/* Enhanced Subheading */}
             <div className="mb-8 animate-fade-in">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+              <h2 className="text-lg md:text-2xl lg:text-5xl font-bold text-primary mb-6">
                 Transform Your Career Journey with Expert Guidance
               </h2>
-              <p className="text-xl md:text-2xl text-brand-cosmic mb-6 font-medium">
+              <p className="text-base md:text-2xl text-brand-cosmic mb-6 font-medium">
                 From Consultation to Placement - Your Success Story Starts Here
               </p>
-              <p className="text-lg md:text-xl text-secondary mb-3 font-medium">
+              <p className="text-sm md:text-xl text-secondary mb-3 font-medium">
                 A Non-Profit Initiative by Career Catalyst Community
               </p>
             </div>

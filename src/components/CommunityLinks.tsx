@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, MessageCircle, Instagram, Linkedin } from "lucide-react";
@@ -29,13 +28,13 @@ const CommunityLinks = () => {
   ];
 
   return (
-    <section className="py-24 brand-oxford">
-      <div className="w-full max-w-none px-8 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+    <section className="py-12 md:py-24 brand-oxford">
+      <div className="w-full px-4 md:px-8 lg:px-16">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
             Join Our <span className="text-primary">Communities</span>
           </h2>
-          <p className="text-xl md:text-2xl lg:text-2xl text-brand-cosmic max-w-6xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-2xl text-brand-cosmic max-w-6xl mx-auto leading-relaxed font-medium">
             Connect with like-minded individuals committed to bridging industry gaps. 
             Choose the platform that works best for you.
           </p>

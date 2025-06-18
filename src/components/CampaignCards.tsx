@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, DollarSign, Users, Lightbulb, TrendingUp, Shield } from "lucide-react";
 
@@ -37,13 +36,13 @@ const CampaignCards = () => {
   ];
 
   return (
-    <section className="py-32 bg-background">
-      <div className="w-full max-w-none px-8 lg:px-16">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8">
+    <section className="py-16 md:py-32 bg-background">
+      <div className="w-full px-4 md:px-8 lg:px-16">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 md:mb-8">
             Why This <span className="text-primary">Campaign?</span>
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-6xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-muted-foreground max-w-6xl mx-auto leading-relaxed font-medium">
             Our Learning to Earning campaign is designed to address the real challenges 
             faced by today's professionals and aspiring entrepreneurs.
           </p>
