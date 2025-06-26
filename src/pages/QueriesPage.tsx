@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -52,13 +51,13 @@ const QueriesPage = () => {
     {
       icon: Mail,
       title: "Email Support",
-      content: "support@careercatalyst.com",
+      content: "careercatalystcommunity@gmail.com",
       description: "We respond within 24 hours"
     },
     {
       icon: Phone,
       title: "WhatsApp Support",
-      content: "+91 XXXXX XXXXX",
+      content: "9988066050",
       description: "Quick support via WhatsApp"
     },
     {
