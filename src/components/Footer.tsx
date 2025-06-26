@@ -72,10 +72,9 @@ const Footer = () => {
           <div>
             <h4 className="text-base md:text-lg font-semibold mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-2 md:space-y-3">
-              <li><a href="/#skills" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Skills & Communities</a></li>
+              <li><a href="/collaborators" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Join Movement</a></li>
               <li><a href="/collaborators" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Collaborators</a></li>
               <li><a href="/testimonials" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Testimonials</a></li>
-              <li><a href="/#communities" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Join Communities</a></li>
               <li><a href="/queries" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Ask Queries</a></li>
             </ul>
           </div>
@@ -88,7 +87,6 @@ const Footer = () => {
               <li><a href="mailto:careercatalystcommunity@gmail.com" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Email Support</a></li>
               <li><a href="/#support" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Support Our Vision</a></li>
               <li><a href="/collaborators" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Become a Partner</a></li>
-              <li><a href="/#communities" className="text-brand-silver hover:text-primary transition-colors duration-300 text-xs md:text-base">Join Movement</a></li>
             </ul>
           </div>
         </div>
