@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Globe, Mic, Users, Award, Brain, Network, Linkedin, Instagram } from "lucide-react";
 
 const communities = [
-  { name: "Technology & IT", link: "#" },
-  { name: "Creatives & Design", link: "#" },
-  { name: "Business & Management", link: "#" },
-  { name: "Entrepreneurship & Freelancing", link: "#" },
-  { name: "Professional & Soft Skills", link: "#" },
-  { name: "Digital Marketing & Content Creation", link: "#" },
-  { name: "Job Preparations", link: "#" },
-  { name: "LinkedIn & AI Prompting", link: "#" },
+  { name: "Technology & IT", link: "https://forms.gle/MUqZoDhmumeuRG5u7" },
+  { name: "LinkedIn Growth & AI Prompting", link: "https://forms.gle/zEMD7avnco52JEg49" },
+  { name: "Job Preparations & Interview Skills", link: "https://forms.gle/Q2Q58gARWDEfiB3m9" },
+  { name: "Professional & Soft Skills", link: "https://forms.gle/bRZuRyzDeaS94rrp6" },
+  { name: "Creatives & Design", link: "https://forms.gle/2Rx9F6zZG4dXRK4y6" },
+  { name: "Business & Management", link: "https://forms.gle/7M7Rti84PXJow23R6" },
+  { name: "Entrepreneurship & Freelancing", link: "https://forms.gle/zjbpRtH3w6FzjCRN7" },
+  { name: "Digital Marketing & Content Creation", link: "https://forms.gle/yahVrwHNXpK5A16s9" },
 ];
 
 const benefits = [

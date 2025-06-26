@@ -13,6 +13,7 @@ import Moderators from "./pages/Moderators";
 import CommunityManagers from "./pages/CommunityManagers";
 import Internships from "./pages/Internships";
 import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/community-managers" element={<CommunityManagers />} />
           <Route path="/internships" element={<Internships />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

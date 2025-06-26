@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = ({ hideHeroSection = false }: { hideHeroSection?: boolean }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const navigateToPage = (path: string) => {
-    window.location.href = path;
   };
 
   const openLink = (url: string) => {
@@ -38,48 +35,12 @@ const Hero = ({ hideHeroSection = false }: { hideHeroSection?: boolean }) => {
             
             {/* Desktop Navigation Menu */}
             <div className="hidden md:flex items-center space-x-6">
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => scrollToSection('home')}
-              >
-                Home
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => navigateToPage('/events')}
-              >
-                Events
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => navigateToPage('/careers')}
-              >
-                Careers
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => navigateToPage('/collaborators')}
-              >
-                Collaborators
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => navigateToPage('/testimonials')}
-              >
-                Testimonials
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
-                onClick={() => navigateToPage('/queries')}
-              >
-                Ask Queries
-              </Button>
+              <Link to="/" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Home</Link>
+              <Link to="/events" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Events</Link>
+              <Link to="/careers" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Careers</Link>
+              <Link to="/collaborators" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Collaborators</Link>
+              <Link to="/testimonials" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Testimonials</Link>
+              <Link to="/queries" className="text-white hover:text-primary hover:bg-primary/10 text-lg px-3 py-2 rounded transition-colors duration-200">Ask Queries</Link>
             </div>
             
             {/* Desktop Social Media */}
@@ -122,12 +83,12 @@ const Hero = ({ hideHeroSection = false }: { hideHeroSection?: boolean }) => {
           {mobileMenuOpen && (
             <div className="md:hidden mt-3 bg-brand-oxford rounded-lg shadow-lg p-4 flex flex-col space-y-3">
               <div className="flex flex-col space-y-2">
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { scrollToSection('home'); setMobileMenuOpen(false); }}>Home</Button>
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/events'); setMobileMenuOpen(false); }}>Events</Button>
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/careers'); setMobileMenuOpen(false); }}>Careers</Button>
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/collaborators'); setMobileMenuOpen(false); }}>Collaborators</Button>
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/testimonials'); setMobileMenuOpen(false); }}>Testimonials</Button>
-                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/queries'); setMobileMenuOpen(false); }}>Ask Queries</Button>
+                <Link to="/" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link to="/events" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Events</Link>
+                <Link to="/careers" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
+                <Link to="/collaborators" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Collaborators</Link>
+                <Link to="/testimonials" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Testimonials</Link>
+                <Link to="/queries" className="text-white text-base justify-start px-3 py-2 rounded hover:text-primary hover:bg-primary/10" onClick={() => setMobileMenuOpen(false)}>Ask Queries</Link>
               </div>
               
               {/* Mobile Social Media */}
