@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Instagram, Linkedin, MessageCircle, CheckCircle, Menu } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({ hideHeroSection = false }: { hideHeroSection?: boolean }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -44,6 +44,20 @@ const Hero = () => {
                 onClick={() => scrollToSection('home')}
               >
                 Home
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
+                onClick={() => navigateToPage('/events')}
+              >
+                Events
+              </Button>
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-primary hover:bg-primary/10 text-lg"
+                onClick={() => navigateToPage('/careers')}
+              >
+                Careers
               </Button>
               <Button 
                 variant="ghost" 
@@ -109,6 +123,8 @@ const Hero = () => {
             <div className="md:hidden mt-3 bg-brand-oxford rounded-lg shadow-lg p-4 flex flex-col space-y-3">
               <div className="flex flex-col space-y-2">
                 <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { scrollToSection('home'); setMobileMenuOpen(false); }}>Home</Button>
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/events'); setMobileMenuOpen(false); }}>Events</Button>
+                <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/careers'); setMobileMenuOpen(false); }}>Careers</Button>
                 <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/collaborators'); setMobileMenuOpen(false); }}>Collaborators</Button>
                 <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/testimonials'); setMobileMenuOpen(false); }}>Testimonials</Button>
                 <Button variant="ghost" className="text-white text-base justify-start" onClick={() => { navigateToPage('/queries'); setMobileMenuOpen(false); }}>Ask Queries</Button>
@@ -148,107 +164,107 @@ const Hero = () => {
           )}
         </div>
       </nav>
-
-      {/* Hero Section */}
-      <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 md:pt-24 lg:pt-20">
-        {/* Enhanced Background pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-56 h-56 bg-primary rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-secondary rounded-full blur-2xl animate-pulse delay-500"></div>
-        </div>
-        
-        <div className="w-full px-4 md:px-8 lg:px-16 z-10">
-          <div className="text-center">
-            {/* Enhanced Main Heading - Single Line */}
-            <div className="mb-8 animate-fade-in">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl">
-                  Learning to Earning
-                </span>
-              </h1>
-            </div>
-            
-            {/* Enhanced Subheading */}
-            <div className="mb-8 animate-fade-in">
-              <h2 className="text-lg md:text-2xl lg:text-5xl font-bold text-primary mb-6">
-                Transform Your Career Journey with Expert Guidance
-              </h2>
-              <p className="text-base md:text-2xl text-brand-cosmic mb-6 font-medium">
-                From Consultation to Placement - Your Success Story Starts Here
-              </p>
-              <p className="text-sm md:text-xl text-secondary mb-3 font-medium">
-                A Non-Profit Initiative by Career Catalyst Community
-              </p>
-            </div>
-            
-            {/* Key Benefits */}
-            <div className="max-w-6xl mx-auto mb-12 animate-fade-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">LinkedIn Profile Optimization</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">AI-Powered Growth Strategies</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">Job Preparation & Placement</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-base font-medium">Career Guidance Support</span>
-                </div>
+      {hideHeroSection ? null : (
+        <section id="home" className="relative min-h-[70vh] flex items-center justify-center brand-oxford text-white overflow-hidden pt-32 md:pt-24 lg:pt-20">
+          {/* Enhanced Background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-56 h-56 bg-primary rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-secondary rounded-full blur-2xl animate-pulse delay-500"></div>
+          </div>
+          
+          <div className="w-full px-4 md:px-8 lg:px-16 z-10">
+            <div className="text-center">
+              {/* Enhanced Main Heading - Single Line */}
+              <div className="mb-8 animate-fade-in">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-white via-brand-cosmic to-primary bg-clip-text text-transparent drop-shadow-2xl">
+                    Learning to Earning
+                  </span>
+                </h1>
               </div>
-            </div>
-            
-            {/* Enhanced Impact Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in">
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="flex items-center justify-center mb-4">
-                    <Users className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">100%</span>
+              
+              {/* Enhanced Subheading */}
+              <div className="mb-8 animate-fade-in">
+                <h2 className="text-lg md:text-2xl lg:text-5xl font-bold text-primary mb-6">
+                  Transform Your Career Journey with Expert Guidance
+                </h2>
+                <p className="text-base md:text-2xl text-brand-cosmic mb-6 font-medium">
+                  From Consultation to Placement - Your Success Story Starts Here
+                </p>
+                <p className="text-sm md:text-xl text-secondary mb-3 font-medium">
+                  A Non-Profit Initiative by Career Catalyst Community
+                </p>
+              </div>
+              
+              {/* Key Benefits */}
+              <div className="max-w-6xl mx-auto mb-12 animate-fade-in">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-base font-medium">LinkedIn Profile Optimization</span>
                   </div>
-                  <p className="text-secondary text-lg font-medium">Non-Profit Mission</p>
+                  <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-base font-medium">AI-Powered Growth Strategies</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-base font-medium">Job Preparation & Placement</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-base font-medium">Career Guidance Support</span>
+                  </div>
                 </div>
               </div>
               
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="flex items-center justify-center mb-4">
-                    <Target className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">∞</span>
+              {/* Enhanced Impact Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-fade-in">
+                <div className="text-center group">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-center justify-center mb-4">
+                      <Users className="h-10 w-10 text-primary mr-3" />
+                      <span className="text-4xl md:text-5xl font-bold text-primary">100%</span>
+                    </div>
+                    <p className="text-secondary text-lg font-medium">Non-Profit Mission</p>
                   </div>
-                  <p className="text-secondary text-lg font-medium">Career Opportunities</p>
                 </div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="flex items-center justify-center mb-4">
-                    <Zap className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">0₹</span>
+                
+                <div className="text-center group">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-center justify-center mb-4">
+                      <Target className="h-10 w-10 text-primary mr-3" />
+                      <span className="text-4xl md:text-5xl font-bold text-primary">∞</span>
+                    </div>
+                    <p className="text-secondary text-lg font-medium">Career Opportunities</p>
                   </div>
-                  <p className="text-secondary text-lg font-medium">Cost to Join</p>
                 </div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="flex items-center justify-center mb-4">
-                    <CheckCircle className="h-10 w-10 text-primary mr-3" />
-                    <span className="text-4xl md:text-5xl font-bold text-primary">50K</span>
+                
+                <div className="text-center group">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-center justify-center mb-4">
+                      <Zap className="h-10 w-10 text-primary mr-3" />
+                      <span className="text-4xl md:text-5xl font-bold text-primary">0₹</span>
+                    </div>
+                    <p className="text-secondary text-lg font-medium">Cost to Join</p>
                   </div>
-                  <p className="text-secondary text-lg font-medium">Goal for 2025</p>
+                </div>
+                
+                <div className="text-center group">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-center justify-center mb-4">
+                      <CheckCircle className="h-10 w-10 text-primary mr-3" />
+                      <span className="text-4xl md:text-5xl font-bold text-primary">50K</span>
+                    </div>
+                    <p className="text-secondary text-lg font-medium">Goal for 2025</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };
