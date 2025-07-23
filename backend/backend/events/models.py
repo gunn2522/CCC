@@ -1,8 +1,9 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Event(models.Model):
     event_title = models.CharField(max_length=200)
-    event_description = models.TextField()
+    event_description = RichTextField()
     event_date = models.DateField()
     event_time = models.TimeField()
     event_banner = models.ImageField(upload_to='event_banners/')

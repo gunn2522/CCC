@@ -75,6 +75,11 @@ const Events = () => {
                           <strong>Time:</strong> {event.event_time}
                         </span>
                       </div>
+
+                      <p className="text-brand-jet text-sm mb-4 whitespace-pre-line line-clamp-3">
+                        {event.event_description}
+                      </p>
+
                       <div className="mt-auto">
                         <Link
                           to={`/events/${event.id}`}
