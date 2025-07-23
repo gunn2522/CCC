@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'events',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development only!
+CORS_ALLOW_ALL_ORIGINS = True  # For developments only!
 
 
 ROOT_URLCONF = 'backend.urls'

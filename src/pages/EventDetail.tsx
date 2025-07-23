@@ -49,7 +49,11 @@ const EventDetail = () => {
           <div className="mb-4 text-brand-jet">
             <strong>Date:</strong> {event.event_date} &nbsp; <strong>Time:</strong> {event.event_time}
           </div>
-          <p className="mb-6 whitespace-pre-line ">{event.event_description}</p>
+          <p
+  className="mb-6 whitespace-pre-line"
+  dangerouslySetInnerHTML={{ __html: event.event_description }}
+          ></p>
+
           <a
             href={event.register_link}
             target="_blank"

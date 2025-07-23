@@ -57,11 +57,14 @@ const Events = () => {
                     key={event.id}
                     className="flex flex-col bg-white rounded-2xl shadow-lg border border-primary/20 overflow-hidden transition-transform hover:scale-[1.02] min-h-[420px]"
                   >
-                    <div className="w-full aspect-video bg-gray-100 flex items-center justify-center overflow-hidden" style={{ aspectRatio: '16 / 9' }}>
+                    <div
+                      className="w-full aspect-video bg-gray-100 flex items-center justify-center overflow-hidden"
+                      style={{ aspectRatio: '16 / 9' }}
+                    >
                       <img
                         src={event.event_banner}
                         alt={event.event_title}
-                        className="w-full aspect-video object-cover rounded-lg mb-0"
+                        className="w-full object-cover rounded-lg mb-0"
                         style={{ aspectRatio: '16 / 9' }}
                       />
                     </div>
@@ -76,9 +79,10 @@ const Events = () => {
                         </span>
                       </div>
 
-                      <p className="text-brand-jet text-sm mb-4 whitespace-pre-line line-clamp-3">
-                        {event.event_description}
-                      </p>
+                      <p
+                        className="text-brand-jet text-sm text-gray-800 leading-relaxed mb-4 line-clamp-3 overflow-hidden"
+                        dangerouslySetInnerHTML={{ __html: event.event_description }}
+                      ></p>
 
                       <div className="mt-auto">
                         <Link
